@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
 
   
-  s.user_target_xcconfig =  {'OTHER_LDFLAGS' => ['-lObjC'], 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+  s.user_target_xcconfig =  {'OTHER_LDFLAGS' => ['-lObjC'], 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'ENABLE_BITCODE' => 'NO'}
   s.pod_target_xcconfig  =  {'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 
 
@@ -59,6 +59,7 @@ Pod::Spec.new do |s|
   #百度
   s.subspec 'BDSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
+    ss.frameworks = 'SafariServices'
     # 4.81
     ss.vendored_frameworks = 'XYZAd/BD_SDK/*.framework'
     ss.resource = 'XYZAd/BD_SDK/*.bundle'
