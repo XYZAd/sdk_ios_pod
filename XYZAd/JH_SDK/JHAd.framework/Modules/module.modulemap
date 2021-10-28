@@ -1,0 +1,6 @@
+framework module JHAd {
+  umbrella header "JHAd.h"
+
+  export *
+  module * { export * }
+}

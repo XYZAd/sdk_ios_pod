@@ -1,0 +1,6 @@
+framework module HZSDK {
+  umbrella header "HZSDK.h"
+
+  export *
+  module * { export * }
+}
