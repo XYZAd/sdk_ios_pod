@@ -27,7 +27,6 @@ typedef NS_ENUM(NSInteger, XMADErrorCode) {
     
     XMADErrorCode_Video_Cancel      = 10,///用户取消播放
     XMADErrorCode_Vip_Close         = 11,///付费取消
-    XMADErrorCode_Ad_Metra_invalid  = 12,///广告数据无效，没有封面图
     
     XMADErrorCode_Ad_RewardVideo_limit      = 13,///激励视频展现上限
     XMADErrorCode_RootVC_invalid    = 14,///rootvc无效

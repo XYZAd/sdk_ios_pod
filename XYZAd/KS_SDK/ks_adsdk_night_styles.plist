@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>hotspotNightStyle</key>
+	<dict>
+		<key>backgoundColor</key>
+		<string>#FFFFFF</string>
+		<key>rankTextColor</key>
+		<string>#FF00FF</string>
+		<key>titleTextColor</key>
+		<string>#00FFFF</string>
+		<key>videoCountTextColor</key>
+		<string>#00FF7F</string>
+		<key>viewCountTextColor</key>
+		<string>#FFA500</string>
+	</dict>
+	<key>feedNightStyle</key>
+	<dict>
+		<key>authorNameTextColor</key>
+		<string>#DC143C</string>
+		<key>backgroundColor</key>
+		<string>#19191E</string>
+		<key>likeInfoTextColor</key>
+		<string>#FF1493</string>
+		<key>videoDescribeTextColor</key>
+		<string>#BA55D3</string>
+	</dict>
+	<key>entryNightStyle</key>
+	<dict>
+		<key>videoFromTextColor</key>
+		<string>#00FF7F</string>
+		<key>videoDescribeTextColor</key>
+		<string>#FFD700</string>
+		<key>likeInfoTextColor</key>
+		<string>#C71585</string>
+		<key>backgroundColor</key>
+		<string>#19191E</string>
+		<key>entryTitleTextColor</key>
+		<string>#0000FF</string>
+	</dict>
+</dict>
+</plist>

@@ -33,7 +33,7 @@ typedef NSString XMAdPageType;
 // data Type
 typedef NS_ENUM(NSInteger, XMAdSourceType) {
     XMAdSourceTypeUnkonw,      /// 未知 错误类型
-    XMAdSourceTypeDsp,         /// dsp
+    XMAdSourceTypeHZSDK,         /// 禾赞
     XMAdSourceTypeJRTTSDK,     /// 今日头条SDK
     XMAdSourceTypeGDTSDK,      /// 广点通
     XMAdSourceTypeWYSDK,       /// 万裕
@@ -61,7 +61,7 @@ FOUNDATION_EXTERN XMAdKey const kGDTSDKAdKey;
 /// 穿山甲
 FOUNDATION_EXTERN XMAdKey const kJRTTSDKAdKey;
 /// 禾赞
-FOUNDATION_EXTERN XMAdKey const kDSPADKey;
+FOUNDATION_EXTERN XMAdKey const kHZADKey;
 /// 万裕聚合
 FOUNDATION_EXTERN XMAdKey const kJHADKey;
 /// 快手

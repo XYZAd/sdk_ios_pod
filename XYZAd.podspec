@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.4.2'
+  s.version          = '1.4.3'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'XYZAd' => 'lidong@021.com' }
   s.source           = { :git => 'https://github.com/XYZAd/sdk_ios_pod.git', :tag => s.version.to_s }
-  
+  # s.source           = { :path => '.'}
   s.ios.deployment_target = '9.0'
   s.frameworks      = 'Foundation', 'UIKit', 'CoreGraphics',
   s.weak_frameworks = 'AdSupport', 'AppTrackingTransparency', 'WebKit', 'StoreKit'
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   
   s.user_target_xcconfig =  {'OTHER_LDFLAGS' => ['-lObjC'], 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'ENABLE_BITCODE' => 'NO'}
   s.pod_target_xcconfig  =  {'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-
+  # s.xcconfig = {'USER_HEADER_SEARCH_PATHS' => '"${PROJECT_DIR}/.."/**' }
 
 
   s.default_subspecs = 'XMAdSDK'
@@ -39,7 +39,8 @@ Pod::Spec.new do |s|
   #XMAd
   s.subspec 'XMAdSDK' do |ss|
     ss.frameworks = 'Security', 'CoreMotion', 'CoreLocation', 'SystemConfiguration', 'CoreTelephony'
-    ss.vendored_frameworks = 'XYZAd/XMAd/*.framework'
+    ss.vendored_frameworks = 'XYZAd/XMAd/*.xcframework','XYZAd/XMAd/*.framework'
+    #ss.vendored_xcframeworks = 'XYZAd/XMAd/*.xcframework'
     ss.resource = 'XYZAd/XMAd/*.bundle'
   end
   
@@ -53,29 +54,25 @@ Pod::Spec.new do |s|
   #穿山甲
   s.subspec 'JRTTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'Ads-CN', '4.0.0.1'
+    ss.dependency 'Ads-CN', '4.0.0.5'
   end
 
   #百度
   s.subspec 'BDSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.frameworks = 'SafariServices'
-    # 4.81
-    ss.vendored_frameworks = 'XYZAd/BD_SDK/*.framework'
-    ss.resource = 'XYZAd/BD_SDK/*.bundle'
+    ss.dependency 'BaiduMobAdSDK', '4.82'
   end
 
   #广点通
   s.subspec 'GDTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'GDTMobSDK', '4.13.11'
+    ss.dependency 'GDTMobSDK', '4.13.26'
   end
 
   #MTG
   s.subspec 'MTGSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    # 7.0.1
-    ss.vendored_frameworks = 'XYZAd/MTG_SDK/*.xcframework'
+    ss.dependency 'MintegralAdSDK/All', '7.0.4'
   end
 
   #SigmobAd
@@ -95,8 +92,8 @@ Pod::Spec.new do |s|
   #聚合
   s.subspec 'JHSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'XYZAd/GDTSDK'
-    # 42.095
+	ss.dependency 'GDTMobSDK', '4.13.26'
+    # 42.096
     ss.vendored_frameworks = 'XYZAd/JH_SDK/*.framework'
   end  
     

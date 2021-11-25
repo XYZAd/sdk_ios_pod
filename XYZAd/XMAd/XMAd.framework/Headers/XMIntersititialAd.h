@@ -30,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告基本信息
 @property (nonatomic, strong, readonly) XMAdMaterialMeta *materialMeta;
 
+/// 是否静音播放
+@property (nonatomic, assign) BOOL videoMuted;
+
 
 /// 展示插屏
 /// @param rootVC  根试图控制器

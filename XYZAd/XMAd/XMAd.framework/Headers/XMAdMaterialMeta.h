@@ -13,22 +13,22 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XMAdMaterialMeta : NSObject
 
 /// 应用id
-@property (nonatomic, copy) NSString *appid;
+@property (nonatomic, copy, readonly) NSString *appid;
 
 /// 广告位id
-@property (nonatomic, copy) NSString *slotid;
+@property (nonatomic, copy, readonly) NSString *slotid;
 
 /// 广告位置
-@property (nonatomic, copy) XMAdPageType *adposition;
+@property (nonatomic, copy, readonly) XMAdPageType *adposition;
 
 /// 广告类型
-@property (nonatomic, assign) XMAdSourceType adsource;
+@property (nonatomic, assign, readonly) XMAdSourceType adsource;
 
 
-@property (nonatomic, copy) NSString *gametype;
+@property (nonatomic, copy, readonly) NSString *gametype;
 
 /// 广告单价标签
-@property (nonatomic, copy) NSString *ecpmLevel;
+@property (nonatomic, copy, readonly) NSString *ecpmLevel;
 
 @end
 

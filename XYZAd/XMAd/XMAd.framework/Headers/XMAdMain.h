@@ -42,6 +42,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 竞价上报url
 @property (nonatomic, copy, nullable) NSString *sdk_biddingURL;
+
+/// bidding二次请求上报（sigmob和mtg）
+@property (nonatomic, copy, nullable) NSString *sdk_secReqURL;
+
+/// bidding二次返回上报（sigmob和mtg）
+@property (nonatomic, copy, nullable) NSString *sdk_secReturnURL;
 @end
 
 

@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
         *adTitle,      // 标题
         *adSubTitle,   // 副标题
         *adSource,     // jrtt取自nativeAd.data.source , gdt写死了”广点通“
-        *iconUrl;   //iconURL，dsp的没有，是nil
+        *iconUrl;   //iconURL，禾赞的没有，是nil
 
 /// 封面 优先封面 其次取第一张小图
 @property (nonatomic, strong, readonly) XMAdImage *coverImage;
@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 此方法 会添加点击事件 且会自动监听containerView的进屏
 /// @param containerView  adView容器视图
-/// @param clickableViews 可以点击的视图， if empty will clickAble containerView，（注意，当为视频广告的时候，请不要将(大图封面)imageView传进来，或者将imageView隐藏掉）
+/// @param clickableViews 可以点击的视图， if empty will clickAble containerView
 /// @param vc             需传入用来弹出目标页的ViewController，一般为当前ViewController
 - (void)registerAdContainer:(__kindof UIView *)containerView
              ableClickViews:(NSArray<__kindof UIView *> * _Nullable)clickableViews

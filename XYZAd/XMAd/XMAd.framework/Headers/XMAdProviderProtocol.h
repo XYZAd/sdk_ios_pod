@@ -27,6 +27,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)clearLocalXMAdInfo:(XMAdPageType *)position;
 
 
+/// 缓存里是否有广告（只要有就返回true）
++ (BOOL)cachesHasAd:(XMAdPageType *)position;
+
+
 
 @end
 

@@ -27,6 +27,7 @@
 #import <XMAd/XMIntersititialAd.h>
 #import <XMAd/XMExpressImgTextAd.h>
 #import <XMAd/XMFullScreenAd.h>
+#import <XMAd/XMNewInterstitialAd.h>
 
 // 广告管理类
 #import <XMAd/XMImgTextAdProvider.h> /// 图文
@@ -37,7 +38,8 @@
 #import <XMAd/XMDrawVideoAdProvider.h>  /// draw
 #import <XMAd/XMExpressDrawAdProvider.h>
 #import <XMAd/XMExpressImgTextAdProvider.h>/// 图文模版
-#import <XMAd/XMFullScreenAdProvider.h>
+#import <XMAd/XMFullScreenAdProvider.h> /// 全屏视频
+#import <XMAd/XMNewInterstitialAdProvider.h> /// 新插屏
 
 #import <XMAd/XMError.h>
 #import <XMAd/XMAdMaterialMeta.h>

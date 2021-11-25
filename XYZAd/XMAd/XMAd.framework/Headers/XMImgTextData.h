@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, XMFeedADMode) {
     XMFeedADMode_GroupImage                      , ///组图
     XMFeedADMode_SmallImage                      , ///单图
     XMFeedADMode_VideoImage                      , ///视频
+    XMFeedAdMode_Text                            , ///只有文字，没有图片
 };
 
 /// 图片

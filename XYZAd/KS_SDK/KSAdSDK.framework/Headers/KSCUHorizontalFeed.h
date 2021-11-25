@@ -6,13 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "KSCUContentPageDelegate.h"
+#import "KSCUHorizontalFeedCallBackProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-@protocol KSCUHorizontalFeedCallBackProtocol <KSCUVideoStateDelegate>
-
-@end
 
 @interface KSCUHorizontalFeedConfig : NSObject
 
@@ -25,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KSCUHorizontalFeed : NSObject
 
-@property (nonatomic, strong,readonly) UIViewController *feedViewController;
+@property (nonatomic, strong, readonly) UIViewController *feedViewController;
 
 - (instancetype)initWithPosId:(NSString *)posId
                 configBuilder:(void(^ _Nullable)(KSCUHorizontalFeedConfig *config) )configBuilder NS_DESIGNATED_INITIALIZER;
