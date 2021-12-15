@@ -16,7 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XMDrawVideoAdProvider : NSObject <XMAdProviderProtocol>
 
-
+/*
+ 
+ 注意，获取的广告model，sdk内部将不在持有，需要外部持有引用，防止释放
+ 
+ */
 
 /// 请求draw广告
 /// @param param 请求信息

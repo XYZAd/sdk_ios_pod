@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告基本信息
 @property (nonatomic, strong, readonly) XMAdMaterialMeta *materialMeta;
 
+/// 是否死等最高价(bidding逻辑才有效)
+@property (nonatomic, assign) BOOL splashWaitEcpmHight;
+
 /// 请求开屏广告 （立即展示假的启动图<依次取LaunchStoryboard、LaunchImage>）
 /// @param param 广告位 （不可更改，如果广告位不同，请实例化多个本类对象）
 /// @param size size (一般为 宽等于屏幕宽 高为屏幕高*0.84, 不能低于屏幕的75%)
@@ -56,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 点击回调
 - (void)splashAdDidClick:(XMSplashAdProvider *)provider;
+
+/// 即将关闭
+- (void)splashAdWillClose:(XMSplashAdProvider *)provider;
 
 /// 关闭
 - (void)splashAdDidClose:(XMSplashAdProvider *)provider;

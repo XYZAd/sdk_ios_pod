@@ -31,6 +31,18 @@ NS_ASSUME_NONNULL_BEGIN
 /** 模板类广告请求时 需要的参数*/
 @interface XMAdExpressParam : XMAdParam
 
+/*
+ 
+ 对于插屏来说，模版的size是穿山甲和快手的请求参数，若不接穿山甲和快手，则可以忽略这个参数，
+ 这里穿山甲提供三个默认值选项
+ 宽高比1:1== {300,300}
+ 宽高比2:3== {300,450}
+ 宽高比3:2== {300,200}
+ 
+ 快手也可以用穿山甲的这三个值，快手不做这个限制
+ 
+ 
+ */
 /// 模板size
 @property (nonatomic, assign) CGSize size;
 
@@ -45,6 +57,11 @@ NS_ASSUME_NONNULL_BEGIN
 /** Banner广告请求时 需要的参数*/
 @interface XMAdBannerParam : XMAdParam
 
+/*
+ 
+ banner的size，这个可以自定义，没有限制
+ 
+ */
 /// 显示size
 @property (nonatomic, assign) CGSize size;
 

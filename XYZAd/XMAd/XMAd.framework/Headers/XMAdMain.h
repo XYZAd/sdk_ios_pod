@@ -12,45 +12,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-/// 新获取广告云控URL
-@interface XMAdURLS : NSObject
-
-/// 新获取广告云控URL <required>
-@property (nonatomic, copy, nullable) NSString *adCloudConfig_NewURL;
-
-/// 上面这个接口的前置接口
-@property (nonatomic, copy, nullable) NSString *adCloudConfig_NewURL_PreURL;
-
-/// sdk请求日志
-@property (nonatomic, copy, nullable) NSString *sdk_ReqLogURL;
-
-/// sdk请求结束日志
-@property (nonatomic, copy, nullable) NSString *sdk_ReqBackLogURL;
-
-/// sdk展示日志
-@property (nonatomic, copy, nullable) NSString *sdk_showLogURL;
-
-/// sdk点击日志
-@property (nonatomic, copy, nullable) NSString *sdk_clickLogURL;
-
-/// 广告触发上报的url
-@property (nonatomic, copy, nullable) NSString *sdk_triggerURL;
-
-/// 视频播放完成上报的url
-@property (nonatomic, copy, nullable) NSString *sdk_videoPlayURL;
-
-/// 竞价上报url
-@property (nonatomic, copy, nullable) NSString *sdk_biddingURL;
-
-/// bidding二次请求上报（sigmob和mtg）
-@property (nonatomic, copy, nullable) NSString *sdk_secReqURL;
-
-/// bidding二次返回上报（sigmob和mtg）
-@property (nonatomic, copy, nullable) NSString *sdk_secReturnURL;
-@end
-
-
 typedef struct {
     NSString *appId;
     NSString *appKey;
@@ -92,10 +53,6 @@ typedef struct {
 /// 获取广告配置 <required>
 /// (注意 这是强引用)
 @property (nonatomic, strong) id<XMAdConfigBridge> adConfigBridge;
-
-/// 配置URL <option>
-/// 优先级: 云控配置 > 此配置 > SDK默认配置
-@property (nonatomic, strong, nullable) XMAdURLS *urlConfig;
 
 /// 配置三方SDK提前初始化 <option>
 /// 正常初始化三方SDK的时机, 是在业务发起对应请求时触发, 可能某些三方SDK会出现配置拉取慢/广告返回慢/首次无返回等问题
