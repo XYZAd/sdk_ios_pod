@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)jh_setTransmitIDFA:(NSString*)idfaString;
 
+
 @end
 
 NS_ASSUME_NONNULL_END
