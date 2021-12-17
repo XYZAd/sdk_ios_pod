@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.4.4'
+  s.version          = '1.4.4.1'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -98,7 +98,7 @@ Pod::Spec.new do |s|
   end  
     
   #游可盈
-  s.subspec 'YouKeYingDK' do |ss|
+  s.subspec 'YouKeYingSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
     # 2.3.0.209
     ss.vendored_frameworks = 'XYZAd/YKY_SDK/*.framework'
