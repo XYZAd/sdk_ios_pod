@@ -29,6 +29,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)jh_setTransmitIDFA:(NSString*)idfaString;
 
+/**
+ 关闭个性化推荐广告
+ 1:屏蔽个性化推荐广告
+ 0(所有非1):不屏蔽个性化推荐广告
+ */
++ (void)jh_setPersonalizedState:(NSInteger)state;
 
 @end
 

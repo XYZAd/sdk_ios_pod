@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setupWithConfig:(XMCfigParams *)param
             paramBridge:(nullable id<XMDynamicParamBridge>)paramBridge;
 
-/// 版本号
+/// SDK版本号
 + (NSString *)sdkVersion;
 
 @end

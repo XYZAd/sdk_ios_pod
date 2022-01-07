@@ -9,17 +9,17 @@
 #ifndef XMCommonDef_h
 #define XMCommonDef_h
 
-//
+
 typedef NS_ENUM(NSInteger, XMSDKRunMode) {
-    XMSDKRunModeRelease = 0,
-    XMSDKRunModeITest   = -999,  // URL改为测试环境
+    XMSDKRunModeRelease = 0,     // URL使用生产环境地址
+    XMSDKRunModeITest   = -999,  // URL使用测试环境地址
 };
 
 //
 typedef NS_ENUM(NSInteger, XMSDKLogLevel) {
-    XMSDKLogLevelError,
-    XMSDKLogLevelAll,
-    XMSDKLogLevelNone,
+    XMSDKLogLevelError, // 只输出error
+    XMSDKLogLevelAll,   // 输出全部日志
+    XMSDKLogLevelNone,  // 关闭日志输出
 };
 
 
