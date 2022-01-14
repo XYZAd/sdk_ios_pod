@@ -40,6 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 点击回调
 - (void)expressImgTextAdDidClick:(XMExpressImgTextAd *)ad;
 
+/// 点击关闭(已经移除，这个协议相当于通知)
+- (void)expressImgTextAdDidClose:(XMExpressImgTextAd *)ad;
+
 /// 用来跳转的vc
 - (UIViewController *)expressImgTextAdPresentViewController;
 

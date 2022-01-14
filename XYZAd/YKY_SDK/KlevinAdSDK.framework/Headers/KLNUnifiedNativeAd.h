@@ -22,6 +22,12 @@ typedef NS_ENUM(NSUInteger, KLNUnifiedNativeAdType) {
     
 };
 
+typedef NS_ENUM(NSUInteger, KLNUnifiedNativeAdVideoAutoPlayPolicy) {
+    KLNUnifiedNativeAdVideoAutoPlayPolicyAlways = 0, // 总是自动播放，无论网络条件
+    KLNUnifiedNativeAdVideoAutoPlayPolicyWIFI = 1, // WIFI 下自动播放
+    KLNUnifiedNativeAdVideoAutoPlayPolicyNever = 2, // 从不自动播放，无论网络条件
+};
+
 @class KLNUnifiedNativeAd;
 @protocol KLNUnifiedNativeAdDelegate;
 
@@ -75,6 +81,9 @@ typedef void (^KLNUnifiedNativeAdLoadCompletionHandler)(NSArray<KLNUnifiedNative
 /// 广告图片URL
 @property (nonatomic, readonly, nullable) NSString *imageUrl;
 
+/// 视频广告自动播放策略，默认 KLNUnifiedNativeAdVideoAutoPlayPolicyAlways（总是自动播放）
+@property (nonatomic, assign) KLNUnifiedNativeAdVideoAutoPlayPolicy videoAutoPlayPolicy;
+
 /// 加载自渲染广告方法
 /// @param request 自渲染广告请求对象
 /// @param completionHandler 广告信息加载结果回调（成功/失败），请注意：回调非线程安全
@@ -101,6 +110,7 @@ typedef void (^KLNUnifiedNativeAdLoadCompletionHandler)(NSArray<KLNUnifiedNative
 /// 用户手动关闭广告时，请调用该方法
 - (void)dislike;
 
+
 @end
 
 @protocol KLNUnifiedNativeAdDelegate <NSObject>
@@ -113,10 +123,12 @@ typedef void (^KLNUnifiedNativeAdLoadCompletionHandler)(NSArray<KLNUnifiedNative
 - (void)kln_unifiedNativeAdDidLoad:(KLNUnifiedNativeAd *)ad didCompleteWithError:(NSError *_Nullable)error;
 
 /// 广告曝光回调
+/// 业务方可以通过实现该方法，统计｜曝光｜量（对账）
 /// @param ad  KLNUnifiedNativeAd 实例
 - (void)kln_unifiedNativeAdWillExpose:(KLNUnifiedNativeAd *)ad;
 
 /// 广告点击回调
+/// 业务方可以通过实现该方法，统计｜点击｜量（对账）
 /// @param ad KLNUnifiedNativeAd 实例
 - (void)kln_unifiedNativeAdDidClick:(KLNUnifiedNativeAd *)ad;
 

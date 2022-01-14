@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) KSRewardedVideoModel *rewardedVideoModel;
 @property (nonatomic, weak, nullable) id<KSRewardedVideoAdDelegate> delegate;
+@property (nonatomic, weak, nullable) id<KSRewardedVideoAdDelegate> rewardPlayAgainInteractionDelegate;
 
 - (instancetype)initWithPosId:(NSString *)posId rewardedVideoModel:(KSRewardedVideoModel *)rewardedVideoModel;
 

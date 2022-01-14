@@ -32,6 +32,12 @@
 #import "KSAdUserInfo.h"
 #endif
 
+#if __has_include(<KSUServerBidding/KSAdBiddingAdModel.h>)
+#import <KSUServerBidding/KSAdBiddingAdModel.h>
+#else
+#import "KSAdBiddingAdModel.h"
+#endif
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KSAdSDKManager : NSObject
@@ -105,6 +111,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)appId;
 
 + (NSString *)deviceId; //获取did
+/**
+ * 获取SDK的bit请求报文token
+ * @param model 中posId是必传的，其余参数可参考各类广告调用
+ * @return 返回SDK的token
+*/
++ (NSString *)getBidRequestToken:(KSAdBiddingAdModel *)model;
 
 @end
 

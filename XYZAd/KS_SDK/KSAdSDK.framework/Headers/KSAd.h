@@ -33,6 +33,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) KSAdInteractionType interactionType;
 /// ad material type, avaliable after ad load
 @property (nonatomic, assign, readonly) KSAdMaterialType materialType;
+/**
+ server bidding load ad data
+*/
+- (void)loadAdDataWithResponse:(NSDictionary *)response;
 
 @end
 

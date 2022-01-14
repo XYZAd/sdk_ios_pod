@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.4.4.2'
+  s.version          = '1.4.5'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
   #百度
   s.subspec 'BDSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'BaiduMobAdSDK', '4.82'
+    ss.dependency 'BaiduMobAdSDK', '4.842'
   end
 
   #广点通
@@ -103,5 +103,24 @@ Pod::Spec.new do |s|
     # 2.3.0.209
     ss.vendored_frameworks = 'XYZAd/YKY_SDK/*.framework'
   end  
+
+  #AdColony
+  s.subspec 'AdColonySDK' do |ss|
+    ss.dependency 'XYZAd/XMAdSDK'
+    ss.dependency 'AdColony', '4.7.2'
+  end
+
+  #IronSource
+  s.subspec 'IronSourceSDK' do |ss|
+    ss.dependency 'XYZAd/XMAdSDK'
+    ss.dependency 'IronSourceSDK','7.1.12.0'
+  end
+
+  #京东
+  s.subspec 'JDSDK' do |ss|
+    ss.dependency 'XYZAd/XMAdSDK'
+    # 1.4.0
+    ss.vendored_frameworks = 'XYZAd/JD_SDK/*.framework'
+  end
 
 end

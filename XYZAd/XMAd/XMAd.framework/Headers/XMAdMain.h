@@ -39,6 +39,15 @@ typedef struct {
 /// 百度appid
 @property (nonatomic, copy, nullable) NSString *bd_appid;
 
+/// 京东广告appid
+@property (nonatomic, copy, nullable) NSString *jd_appid;
+
+/// AdColony appid
+@property (nonatomic, copy, nullable) NSString *acy_appid;
+
+/// ironsource appid
+@property (nonatomic, copy, nullable) NSString *is_appid;
+
 /// MTG`s appid(坑爹的玩意)
 @property (nonatomic, assign        ) XMPreInitInfo mtgInfo;
 

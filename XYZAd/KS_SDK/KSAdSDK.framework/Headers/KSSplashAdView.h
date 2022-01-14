@@ -96,6 +96,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (id)initWithPosId:(NSString *)posId;
 /// load ad data
 - (void)loadAdData;
+/// server bidding load ad data
+- (void)loadAdDataWithResponse:(NSDictionary *)response;
 /// show splash ad in view, should be called after ksad_splashAdContentDidLoad:
 - (void)showInView:(UIView *)view;
 

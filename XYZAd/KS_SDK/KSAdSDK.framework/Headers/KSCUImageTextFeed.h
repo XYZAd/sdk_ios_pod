@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KSCUImageTextFeed : NSObject
 
 @property (nonatomic, readonly) UIViewController *feedViewController;
+/// 配置信息流标题字体大小[18 ~ 24]
+@property (nonatomic, assign) CGFloat titleFontSize;
 
 - (instancetype)initWithPosId:(NSString *)posId NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithPosId:(NSString *)posId

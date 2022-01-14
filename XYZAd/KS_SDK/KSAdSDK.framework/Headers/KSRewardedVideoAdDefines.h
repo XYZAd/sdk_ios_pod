@@ -13,5 +13,11 @@ typedef NS_ENUM(NSInteger, KSAdRewardTaskType) {
     KSAdRewardTaskTypeWatchDetailBrowse        = 1,    // 浏览落地页
 };
 
+typedef NS_ENUM(NSUInteger, KSAdDetailBrowseTaskStep) {
+    KSAdDetailBrowseTaskStepBeforeVideo                     = 0,        //未观看完视频
+    KSAdDetailBrowseTaskStepBeforeDetailBrowse              = 1,        //看完视频
+    KSAdDetailBrowseTaskStepFinish                          = 2,        //浏览落地页
+};
+
 #endif /* KSRewardedVideoAdDefines_h */
 

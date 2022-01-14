@@ -42,6 +42,9 @@ typedef NS_ENUM(NSInteger, XMAdSourceType) {
     XMAdSourceTypeBaiduSDK,    /// 百度sdk
     XMAdSourceTypeMTGSDK,      /// MTG sdk
     XMAdSourceTypeSMSDK,       /// sigMobSDK
+    XMAdSourceTypeIronSourceSDK,    // ironsource
+    XMAdSourceTypeAdColonySDK,      // adcolony
+    XMAdSourceTypeJDSDK,            // 京东
 };
 
 typedef NS_ENUM(NSUInteger, XMAdMediaPlayerStatus) {
@@ -61,18 +64,24 @@ FOUNDATION_EXTERN XMAdKey const kGDTSDKAdKey;
 /// 穿山甲
 FOUNDATION_EXTERN XMAdKey const kJRTTSDKAdKey;
 /// 禾赞
-FOUNDATION_EXTERN XMAdKey const kHZADKey;
+FOUNDATION_EXTERN XMAdKey const kHZAdKey;
 /// 万裕聚合
-FOUNDATION_EXTERN XMAdKey const kJHADKey;
+FOUNDATION_EXTERN XMAdKey const kJHAdKey;
 /// 快手
-FOUNDATION_EXTERN XMAdKey const kKSADKey;
+FOUNDATION_EXTERN XMAdKey const kKSAdKey;
 /// 游可赢
-FOUNDATION_EXPORT XMAdKey const kYKYADKey;
+FOUNDATION_EXPORT XMAdKey const kYKYAdKey;
 /// 百度
-FOUNDATION_EXPORT XMAdKey const kBaiDuADKey;
+FOUNDATION_EXPORT XMAdKey const kBaiDuAdKey;
 /// MTG
-FOUNDATION_EXPORT XMAdKey const kMTGADKey;
+FOUNDATION_EXPORT XMAdKey const kMTGAdKey;
 ///sigMobSDK
 FOUNDATION_EXPORT XMAdKey const kSMAdKey;
+/// ironsource
+FOUNDATION_EXTERN XMAdKey const kIronSourceAdKey;
+/// adColony
+FOUNDATION_EXTERN XMAdKey const kAdColonyAdKey;
+/// 京东
+FOUNDATION_EXPORT XMAdKey const kJDAdKey;
 
 #endif /* XMAdDefine_h */

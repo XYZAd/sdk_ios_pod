@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否静音播放
 @property (nonatomic, assign) BOOL videoMuted;
 
+/// 是否是在看一次的奖励（穿山甲才有），默认是false，没有在看一次
+@property (nonatomic, assign, readonly) BOOL againVideoReward;
+
 /// 广告基本信息
 @property (nonatomic, strong, readonly) XMAdMaterialMeta *materialMeta;
 /// 播放激励视频

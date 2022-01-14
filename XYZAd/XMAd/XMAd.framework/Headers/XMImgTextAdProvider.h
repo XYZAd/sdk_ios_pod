@@ -14,7 +14,6 @@
 @class XMError;
 NS_ASSUME_NONNULL_BEGIN
 
-/// 默认只支持 gdt jrtt dsp
 
 @interface XMImgTextAdProvider : NSObject <XMAdProviderProtocol>
 

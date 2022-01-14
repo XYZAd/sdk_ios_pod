@@ -25,11 +25,11 @@ typedef NSString *_Nullable(^IdfvBlock)(void);
 
 @interface KSAdPermission : NSObject
 
-@property (nonatomic, copy)LocationBlock locationBlock;
+@property (nonatomic, copy) LocationBlock locationBlock;
 
-@property (nonatomic, copy)IdfaBlock idfaBlock;
+@property (nonatomic, copy) IdfaBlock idfaBlock;
 
-@property (nonatomic, copy)IdfvBlock idfvBlock;
+@property (nonatomic, copy) IdfvBlock idfvBlock;
 
 @end
 

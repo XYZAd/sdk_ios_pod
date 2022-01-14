@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readwrite) BOOL videoSoundEnable;
 @property (nonatomic, assign, readwrite) BOOL playFinished;
+// CoverView是否显示appIcon和appName
+@property (nonatomic, assign, readwrite) BOOL isShowAppInfo;
 
 @end
 

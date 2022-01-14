@@ -17,6 +17,7 @@
 // 主入口 需尽先初始化
 #import <XMAd/XMAdMain.h>
 #import <XMAd/XMAdParam.h>
+#import <XMAd/XMAdParam+NativeRender.h>
 
 // ads
 #import <XMAd/XMImgTextAd.h>

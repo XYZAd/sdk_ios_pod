@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+// 如果更改本model 请把KSAdRewardVideoModel一同修改 这两个类完全一样 为了避免组件循环依赖写了两个
 @interface KSRewardedVideoModel : NSObject
 /**
  required.

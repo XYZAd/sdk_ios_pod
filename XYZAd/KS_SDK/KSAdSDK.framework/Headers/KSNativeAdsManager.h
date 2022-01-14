@@ -25,6 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
  The number of ads requested,The maximum is 5
  */
 - (void)loadAdDataWithCount:(NSInteger)count;
+/**
+ server bidding load ad data
+*/
+- (void)loadAdDataWithResponse:(NSDictionary *)response;
 
 @end
 
