@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   #穿山甲
   s.subspec 'JRTTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'Ads-CN', '4.0.0.5'
+    ss.dependency 'Ads-CN', '4.1.0.2'
   end
 
   #百度
@@ -100,7 +100,7 @@ Pod::Spec.new do |s|
   #游可盈
   s.subspec 'YouKeYingSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    # 2.3.0.209
+    # 2.3.1.203
     ss.vendored_frameworks = 'XYZAd/YKY_SDK/*.framework'
   end  
 
