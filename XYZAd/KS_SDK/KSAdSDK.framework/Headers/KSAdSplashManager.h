@@ -4,12 +4,14 @@
 //
 //  Created by zhangchuntao on 2020/6/2.
 //
+/**
+ 尽量不要往这里面新增逻辑，splashAdView使用之后，这个类被废弃了，保留代码是考虑到线上的老版本外部可能有API的调用
+ */
 
 #import <Foundation/Foundation.h>
 #import "KSAdSplashInteractDelegate.h"
 #import "KSAdSplashViewController.h"
 #import "KSAdSDKError.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 

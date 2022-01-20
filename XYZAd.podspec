@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.4.5'
+  s.version          = '1.4.6'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -54,19 +54,19 @@ Pod::Spec.new do |s|
   #穿山甲
   s.subspec 'JRTTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'Ads-CN', '4.1.0.2'
+    ss.dependency 'Ads-CN', '4.2.0.4'
   end
 
   #百度
   s.subspec 'BDSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'BaiduMobAdSDK', '4.842'
+    ss.dependency 'BaiduMobAdSDK', '4.85'
   end
 
   #广点通
   s.subspec 'GDTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'GDTMobSDK', '4.13.41'
+    ss.dependency 'GDTMobSDK', '4.13.42'
   end
 
   #MTG
@@ -85,15 +85,15 @@ Pod::Spec.new do |s|
   s.subspec 'KSMOBSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
     s.libraries = ["z", "resolv.9", "sqlite3", "c++", "c++abi"]
-    #3.3.21
+    #3.3.27
     ss.vendored_frameworks = 'XYZAd/KS_SDK/*.framework'
   end  
 
   #聚合
   s.subspec 'JHSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-	  ss.dependency 'GDTMobSDK', '4.13.41'
-    # 42.099
+	  ss.dependency 'GDTMobSDK', '4.13.42'
+    # 42.100
     ss.vendored_frameworks = 'XYZAd/JH_SDK/*.framework'
   end  
     
@@ -121,6 +121,18 @@ Pod::Spec.new do |s|
     ss.dependency 'XYZAd/XMAdSDK'
     # 1.4.0
     ss.vendored_frameworks = 'XYZAd/JD_SDK/*.framework'
+  end
+
+  s.subspec 'UMengSDK' do |ss|
+    ss.dependency 'XYZAd/XMAdSDK'
+    ss.dependency 'UMCommon', '7.3.6'
+    ss.dependency 'UMUnionSDK', '1.0.0'
+    ss.dependency 'UMDevice', '2.2.0'
+  end
+
+  s.subspec 'UnityAdSDK' do |ss|
+  	ss.dependency 'XYZAd/XMAdSDK'
+  	ss.dependency 'UnityAds', '4.0.0'
   end
 
 end

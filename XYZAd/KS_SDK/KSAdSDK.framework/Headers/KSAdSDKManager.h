@@ -100,9 +100,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // optional, disable use phone status, default is NO
 + (void)setDisableUsePhoneStatus:(BOOL)disable;
-
+// optional, 设置idfa，请传原始值，不需要加密
 + (void)setIdfaBlock:(IdfaBlock)idfaBlock;
-
+// optional, 设置idfv，请传原始值，不需要加密
 + (void)setIdfvBlock:(IdfvBlock)idfvBlock;
 
 // optional, disable use network status, default is NO

@@ -45,6 +45,8 @@ typedef NS_ENUM(NSInteger, XMAdSourceType) {
     XMAdSourceTypeIronSourceSDK,    // ironsource
     XMAdSourceTypeAdColonySDK,      // adcolony
     XMAdSourceTypeJDSDK,            // 京东
+    XMAdSourceTypeUMSDK,            // 友盟SDK
+    XMAdSourceTypeUnityAdsSDK,      // unityads
 };
 
 typedef NS_ENUM(NSUInteger, XMAdMediaPlayerStatus) {
@@ -83,5 +85,9 @@ FOUNDATION_EXTERN XMAdKey const kIronSourceAdKey;
 FOUNDATION_EXTERN XMAdKey const kAdColonyAdKey;
 /// 京东
 FOUNDATION_EXPORT XMAdKey const kJDAdKey;
+/// 友盟
+FOUNDATION_EXPORT XMAdKey const kUMAdKey;
+/// unityads
+FOUNDATION_EXTERN XMAdKey const kUnityAdKey;
 
 #endif /* XMAdDefine_h */

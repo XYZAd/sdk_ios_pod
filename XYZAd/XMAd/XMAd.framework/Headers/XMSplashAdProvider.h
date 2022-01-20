@@ -42,6 +42,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// 展示 (请在广告请求成功后 调用， 否则无效)
 - (void)presentWithCloseHandle:(void(^)(void))closeCallback;
 
+
+/// 请求开屏广告 （立即展示假的启动图<依次取LaunchStoryboard、LaunchImage>）(纯走delegate)
+/// @param param 广告位 （不可更改，如果广告位不同，请实例化多个本类对象）
+/// @param size size (一般为 宽等于屏幕宽 高为屏幕高*0.84, 不能低于屏幕的75%)
+/// @param time 最大等待时长（会限制在 2 - 8s）
+- (void)loadSplashAdWithParam:(nonnull XMAdParam *)param
+                       adsize:(CGSize)size
+                    totalTime:(CGFloat)time;
+
+
+/// 展示广告，在广告请求成功后 调用， 否则无效
+- (void)showSplashAd;
+
 /// 取消当前广告加载
 - (void)cancel;
 
@@ -54,6 +67,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol XMSplashAdDelegate <NSObject>
 @optional
+
+/// 开屏已经加在成功
+- (void)splashAdDidLoad:(XMSplashAdProvider *)provider;
+
+/// 开屏失败,一系列失败原因都在该代理中抛出
+- (void)splashAdPresent:(XMSplashAdProvider *)provider error:(XMError *)error;
+
 /// 曝光回调
 - (void)splashAdDidExposure:(XMSplashAdProvider *)provider;
 
@@ -68,9 +88,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 关闭详情页回调
 - (void)splashAdDetailPageDidClose:(XMSplashAdProvider *)provider;
-
-/// 开屏失败
-- (void)splashAdPresent:(XMSplashAdProvider *)provider error:(XMError *)error;
 
 @end
 

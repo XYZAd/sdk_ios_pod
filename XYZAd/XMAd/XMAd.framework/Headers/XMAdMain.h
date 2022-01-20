@@ -48,6 +48,12 @@ typedef struct {
 /// ironsource appid
 @property (nonatomic, copy, nullable) NSString *is_appid;
 
+/// UMeng appkey
+@property (nonatomic, copy, nullable) NSString *um_appKey;
+
+/// UnityAd appid
+@property (nonatomic, copy, nullable) NSString *unity_appid;
+
 /// MTG`s appid(坑爹的玩意)
 @property (nonatomic, assign        ) XMPreInitInfo mtgInfo;
 

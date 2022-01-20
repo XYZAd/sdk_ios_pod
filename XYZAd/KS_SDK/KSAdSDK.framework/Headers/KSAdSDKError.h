@@ -45,13 +45,6 @@ typedef NS_ENUM(NSInteger, KSAdErrorCode) {
     KSAdErrorCodeSecurityItemInvalid = 330010, //AppKey, wbIndex, .kss不合法或者与bundleid不匹配
 };
 
-typedef NS_ENUM(NSInteger, KSAdReportErrorCode) {
-    KSAdReportErrorCodeSuccess,
-    KSAdReportErrorCodeProtoToDataError = -1,
-    KSAdReportErrorCodeServerError = -2,
-    KSAdReportErrorCodeDataError = -3,
-    KSAdReportErrorCodeNeedRemoveDBError = -4,
-};
 
 FOUNDATION_EXTERN NSErrorDomain KSADErrorDomain;
 
