@@ -24,10 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告类型
 @property (nonatomic, assign, readonly) XMAdSourceType adsource;
 
-
+/// 场景类型
 @property (nonatomic, copy, readonly) NSString *gametype;
 
-/// 广告单价标签
+/// 广告单价信息标签，注意，这里是加密（base64）后的字符串，如需解密，请联系对接开发
 @property (nonatomic, copy, readonly) NSString *ecpmLevel;
 
 @end

@@ -40,16 +40,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol XMBannerAdDelegate <NSObject>
 @optional
+
 /// 曝光回调
+/// @param ad ad
 - (void)bannerAdDidExposure:(XMBannerAd *)ad;
 
 /// 点击回调
+/// @param ad ad
 - (void)bannerAdDidClick:(XMBannerAd *)ad;
 
 /// 关闭
+/// @param ad ad
 - (void)bannerAdDidClose:(XMBannerAd *)ad;
 
 /// 关闭详情页回调
+/// @param ad ad
 - (void)bannerAdDetailPageDidClose:(XMBannerAd *)ad;
 
 @end

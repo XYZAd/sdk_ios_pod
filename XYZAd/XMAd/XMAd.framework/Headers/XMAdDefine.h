@@ -42,11 +42,12 @@ typedef NS_ENUM(NSInteger, XMAdSourceType) {
     XMAdSourceTypeBaiduSDK,    /// 百度sdk
     XMAdSourceTypeMTGSDK,      /// MTG sdk
     XMAdSourceTypeSMSDK,       /// sigMobSDK
-    XMAdSourceTypeIronSourceSDK,    // ironsource
-    XMAdSourceTypeAdColonySDK,      // adcolony
-    XMAdSourceTypeJDSDK,            // 京东
-    XMAdSourceTypeUMSDK,            // 友盟SDK
-    XMAdSourceTypeUnityAdsSDK,      // unityads
+    XMAdSourceTypeIronSourceSDK,    /// ironsource
+    XMAdSourceTypeAdColonySDK,      /// adcolony
+    XMAdSourceTypeJDSDK,            /// 京东
+    XMAdSourceTypeUMSDK,            /// 友盟SDK
+    XMAdSourceTypeUnityAdsSDK,      /// unityads
+    XMAdSourceTypeFBSDK,            /// facebook
 };
 
 typedef NS_ENUM(NSUInteger, XMAdMediaPlayerStatus) {
@@ -89,5 +90,7 @@ FOUNDATION_EXPORT XMAdKey const kJDAdKey;
 FOUNDATION_EXPORT XMAdKey const kUMAdKey;
 /// unityads
 FOUNDATION_EXTERN XMAdKey const kUnityAdKey;
+/// 脸书
+FOUNDATION_EXTERN XMAdKey const kFBAdKey;
 
 #endif /* XMAdDefine_h */

@@ -34,9 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL videoMuted;
 
 
-/// 展示插屏
-/// @param rootVC  根试图控制器
-/// @param completion      播放结束的回调
+/// 展示插屏，该广告，SDK内部会持有，播放结束后会自动销毁，外部不需要持有
+/// @param rootVC           根试图控制器
+/// @param completion       播放结束的回调
 - (BOOL)showIntersititialAdFromRootVC:(UIViewController *)rootVC
                       closeCompletion:(void (^)(void))completion;
 
@@ -44,16 +44,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol XMIntersititialAdDelegate <NSObject>
 @optional
+
 /// 曝光回调
+/// @param ad ad
 - (void)intersititialAdDidExposure:(XMIntersititialAd *)ad;
 
 /// 点击回调
+/// @param ad ad
 - (void)intersititialAdDidClick:(XMIntersititialAd *)ad;
 
 /// 关闭
+/// @param ad ad
 - (void)intersititialAdDidClose:(XMIntersititialAd *)ad;
 
 /// 关闭详情页回调
+/// @param ad ad
 - (void)intersititialAdDetailPageDidClose:(XMIntersititialAd *)ad;
 
 @end

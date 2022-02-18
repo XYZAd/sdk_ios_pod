@@ -35,6 +35,10 @@ typedef NS_ENUM(NSInteger, XMADErrorCode) {
     
     XMADErrorCode_PriceTooLow       = 16, /// 价格太低
     
+    XMADErrorCode_RenderInvidate    = 17, /// 渲染类型错误
+    
+    XMADErrorCode_CacheNoAd         = 18, /// 缓存中没有广告
+    
     XMADErrorCode_unknown_error     = 9999, /// 未知错误
     
 };
@@ -43,6 +47,9 @@ typedef NS_ENUM(NSInteger, XMADErrorCode) {
 @interface XMError : NSError
 
 + (instancetype)errorWithCode:(NSInteger)code userInfo:(NSDictionary<NSErrorUserInfoKey,id> *)dict;
+
+
++ (instancetype)getErrorWithAdError:(NSError *)error;
 
 @end
 

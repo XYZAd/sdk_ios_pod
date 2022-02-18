@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.4.6'
+  s.version          = '1.4.7'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -133,6 +133,11 @@ Pod::Spec.new do |s|
   s.subspec 'UnityAdSDK' do |ss|
   	ss.dependency 'XYZAd/XMAdSDK'
   	ss.dependency 'UnityAds', '4.0.0'
+  end
+
+  s.subspec 'FBAdSDK' do |ss|
+  	ss.dependency 'XYZAd/XMAd'
+  	ss.dependency 'FBAudienceNetwork', '6.9.0'
   end
 
 end

@@ -35,6 +35,13 @@ typedef NS_ENUM(NSInteger, XMVideoAutoPlayPolicy) {
 @property (nonatomic, assign) BOOL detailPageEnable;
 
 
+/**
+ 只针对于自渲染draw视频广告
+ 设置点击暂停（目前只能设置穿山甲）
+ */
+@property (nonatomic, assign) BOOL drawVideoClickEnable;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

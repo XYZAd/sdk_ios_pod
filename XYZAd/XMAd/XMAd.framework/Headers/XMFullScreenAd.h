@@ -34,9 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL videoMuted;
 
 
-/// 展示全屏广告
-/// @param rootVC  根试图控制器
-/// @param completion      播放结束的回调
+/// 展示全屏广告，该广告，SDK内部会持有，播放结束后会自动销毁，外部不需要持有
+/// @param rootVC       根试图控制器
+/// @param completion   播放结束的回调
 - (BOOL)showFullScreenAdFromRootVC:(UIViewController *)rootVC
                    closeCompletion:(void (^)(BOOL success, NSString * _Nullable errMsg))completion;
 
@@ -44,16 +44,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol XMFullScreenAdDelegate <NSObject>
 @optional
+
 /// 曝光回调
+/// @param ad ad
 - (void)fullScreenAdDidExposure:(XMFullScreenAd *)ad;
 
 /// 点击回调
+/// @param ad ad
 - (void)fullScreenAdDidClick:(XMFullScreenAd *)ad;
 
 /// 关闭
+/// @param ad ad
 - (void)fullScreenAdDidClose:(XMFullScreenAd *)ad;
 
 /// 关闭详情页回调
+/// @param ad ad
 - (void)fullScreenAdDetailPageDidClose:(XMFullScreenAd *)ad;
 
 @end

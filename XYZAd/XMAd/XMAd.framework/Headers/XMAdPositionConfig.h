@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 如果是权重（为0时无效），如果是竞价（为0时无效）
 @property (nonatomic, assign) NSInteger weights;
 
-/// 是否是模版（暂时只有穿山甲才会区分模版和非模版，其他sdk则忽略这个值）
+/// 是否是模版
 @property (nonatomic, assign) BOOL istemplate;
 @end
 
