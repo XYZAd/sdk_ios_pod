@@ -136,7 +136,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'FBAdSDK' do |ss|
-  	ss.dependency 'XYZAd/XMAd'
+  	ss.dependency 'XYZAd/XMAdSDK'
   	ss.dependency 'FBAudienceNetwork', '6.9.0'
   end
 
