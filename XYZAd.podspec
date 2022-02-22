@@ -136,8 +136,9 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'FBAdSDK' do |ss|
+    #6.9.0
   	ss.dependency 'XYZAd/XMAdSDK'
-  	ss.dependency 'FBAudienceNetwork', '6.9.0'
+    ss.vendored_frameworks = 'XYZAd/FB_SDK/*.xcframework'
   end
 
 end
