@@ -27,6 +27,7 @@
 #import <XMAd/XMBannerAd.h>
 #import <XMAd/XMIntersititialAd.h>
 #import <XMAd/XMFullScreenAd.h>
+#import <XMAd/XMUniversalAd.h>
 
 // 广告管理类
 #import <XMAd/XMImgTextAdProvider.h> /// 图文
@@ -35,6 +36,7 @@
 #import <XMAd/XMIntersititialAdProvider.h>   /// 插屏
 #import <XMAd/XMSplashAdProvider.h>     /// 开屏
 #import <XMAd/XMFullScreenAdProvider.h> /// 全屏视频
+#import <XMAd/XMUniversalAdProvider.h>  /// 通用广告请求类
 
 #import <XMAd/XMError.h>
 #import <XMAd/XMAdMaterialMeta.h>

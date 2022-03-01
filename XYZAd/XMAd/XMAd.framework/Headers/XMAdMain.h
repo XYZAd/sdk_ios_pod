@@ -12,11 +12,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef struct {
-    NSString *appId;
-    NSString *appKey;
-    NSString *productId;// sigmob的 s2s功能必填
-} XMPreInitInfo;
+@interface XMPreInitInfo : NSObject
+@property (nonatomic, copy, readonly) NSString *appId;
+@property (nonatomic, copy, readonly) NSString *appKey;
+@property (nonatomic, copy, readonly) NSString *productId;// sigmob的 s2s功能必填
+
+- (instancetype)initWithAppid:(nonnull NSString *)appid appKey:(nonnull NSString *)appKey productId:(nullable NSString *)productId;
+
+@end
 
 /// ⚠️ 预初始化三方SDK配置 <option>  (注意 设置哪个appid就会初始化哪个三方sdk)
 @interface XMPreInitSDKAppids : NSObject
@@ -55,10 +58,10 @@ typedef struct {
 @property (nonatomic, copy, nullable) NSString *unity_appid;
 
 /// MTG`s appid(坑爹的玩意)
-@property (nonatomic, assign        ) XMPreInitInfo mtgInfo;
+@property (nonatomic, strong, nullable) XMPreInitInfo *mtgInfo;
 
 /// SigMobSdk
-@property (nonatomic, assign        ) XMPreInitInfo smInfo;
+@property (nonatomic, strong, nullable) XMPreInitInfo *smInfo;
 @end
 
 

@@ -31,11 +31,36 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告类型
 typedef NS_ENUM(NSUInteger, XMAdPositionAdType) {
     XMAdPositionAdTypeFeed                   = 0, /// 信息流(默认)(支持模版，自渲染混出，如果需要混出，请设置expectAdSize)
-    XMAdPositionAdTypeNativeInterstitial     = 1, /// 原生插屏
+    XMAdPositionAdTypeNativeInterstitial     = 1, /// 原生插屏(自渲染)
     XMAdPositionAdTypeNativeBanner           = 2, /// 原生banner(暂不支持)
     XMAdPositionAdTypePaster                 = 3, /// 视频贴片广告（支持混出，需要设置expectAdSize）
     XMAdPositionAdTypeDraw                   = 4, /// draw广告（支持混出，需要设置expectAdSize）
-    
+    /**
+     0-4只能请求图文渲染类广告
+     请注意，如果用XMImgTextAdProvider请求，则该类型只能支持0-4
+     
+     */
+    XMAdPositionAdTypeExpressBanner          = 5, /// 模版banner
+    /**
+     模版banner广告类型使用XMBannerAdProvider请求
+     */
+    XMAdPositionAdTypeRewardVideo            = 6, /// 激励视频
+    /**
+     激励视频广告类型使用XMVideoAdProvider请求
+     */
+    XMAdPositionAdTypeFullScreen             = 7, /// 全屏广告
+    /**
+     全屏广告类型使用XMFullScreenAdProvider请求
+     */
+    XMAdPositionAdTypeIntersititial          = 8, /// 插屏
+    XMAdPositionAdTypeIntersititialV2        = 9, /// 新插屏
+    /**
+     插屏广告类型使用XMIntersititialAdProvider请求
+     */
+    XMAdPositionAdTypeSplash                 = 10,/// 开屏
+    /**
+     开屏广告类型使用XMSplashAdProvider请求
+     */
     
 };
 
@@ -61,7 +86,7 @@ typedef NS_ENUM(NSUInteger, XMNativeInterstitialImageSize) {
  组图(三张高宽比：1.52的图片)
  
  如果是原生信息流，则传入
- 1280*720, 传入的图片尺寸比例范围: 1.64 ~ 1.92
+ 640*360, 传入的图片尺寸比例范围: 1.64 ~ 1.92
  480*320, 传入的图片尺寸比例范围: 1.36 ~ 1.64
  
  如果是原生banner，则传入
@@ -92,12 +117,6 @@ typedef NS_ENUM(NSUInteger, XMNativeInterstitialImageSize) {
 @end
 
 
-
-typedef NS_ENUM(NSInteger, XMInterstitialType) {
-    XMInterstitialTypeCommon                = 0, /// 通用插屏
-    XMInterstitialTypeNew                   = 1, /// 新插屏（只针对于穿山甲有效）
-};
-
 /** 模版插屏类广告请求时 需要的参数*/
 @interface XMAdIntersititialParam : XMAdParam
 
@@ -120,7 +139,7 @@ typedef NS_ENUM(NSInteger, XMInterstitialType) {
 
 
 /// 插屏类型
-@property (nonatomic, assign) XMInterstitialType interstitialType;
+@property (nonatomic, assign) XMAdPositionAdType interstitialType;
 
 + (instancetype)adReqParamsWithPosition:(nonnull XMAdPageType *)position
                              gametypeID:(nullable NSString *)gametypeID NS_UNAVAILABLE;
@@ -135,16 +154,19 @@ typedef NS_ENUM(NSInteger, XMInterstitialType) {
 /** Banner广告请求时 需要的参数*/
 @interface XMAdBannerParam : XMAdParam
 
-/*
- 
- banner的size，这个可以自定义，没有限制
- 
+/**
+ *
+ *  banner的size，如果不接京东，这个可以自定义，没有限制,
+ *  如果接了京东，则有要求：
+ *      640*100, 传入的尺寸比例范围在 5.63~7.17
+ *      640*160, 传入的尺寸比例范围在 3.52~4.48
+ *      644*280, 传入的尺寸比例范围在 2.15~2.57
+ *      720*360, 传入的尺寸比例范围在 2.16~2.15
+ *
+ *
  */
 /// 显示size
 @property (nonatomic, assign) CGSize size;
-
-/// 当前页面VC
-@property (nonatomic, weak  ) UIViewController *viewController;
 
 /// 自动切换时间间隔, 区间为[30 120], 为0时等价于关闭, 默认值0
 @property (nonatomic, assign) int autoSwitchInterval;
@@ -156,11 +178,47 @@ typedef NS_ENUM(NSInteger, XMInterstitialType) {
 + (instancetype)adReqParamsWithPosition:(nonnull XMAdPageType *)position
                              gametypeID:(nullable NSString *)gametypeID
                                  adSize:(CGSize)adSize
-                    presentedController:(nonnull UIViewController *)controller
                      autoSwitchInterval:(int)autoSwitchInterval;
 
 @end
 
+
+@interface XMAdUniversalSubParam : NSObject
+
+/// 指的pgtype
+@property (nonatomic, copy) XMAdPageType *position;
+
+/// 请求广告类型
+@property (nonatomic, assign) XMAdPositionAdType adPositionAdType;
+
+/// 期望大小（信息流广告（且是穿山甲、京东）的插屏、banner，或者是banner才用到）unit pixel（px）.这里统一指的px，和XMAdBannerParam有区别，请注意转换单位
+@property (nonatomic, assign) CGSize expectAdSize;
+
+/// Banner自动切换时间间隔, 区间为[30 120], 为0时等价于关闭, 默认值0,不请求banner则忽略
+@property (nonatomic, assign) int autoSwitchInterval;
+
+/// 快捷创建方式
++ (instancetype)universalAdSubParamWithPosition:(XMAdPageType *)position
+                               adPositionAdType:(XMAdPositionAdType)adPositionAdType;
+
+
+@end
+
+
+/// v5.0请求通用广告
+@interface XMAdUniversalParam : XMAdParam
+
+/// 这里的position禁用
+@property (nonatomic, copy, nonnull   ) XMAdPageType *position NS_UNAVAILABLE;
+
+/// pgtype的集合，类型参见adPositionAdType
+@property (nonatomic, copy, nonnull   ) NSSet <XMAdUniversalSubParam *> *subParams;
+
+
++ (instancetype)adReqParamsWithPosition:(nonnull XMAdPageType *)position
+                             gametypeID:(nullable NSString *)gametypeID NS_UNAVAILABLE;
+
+@end
 
 
 NS_ASSUME_NONNULL_END

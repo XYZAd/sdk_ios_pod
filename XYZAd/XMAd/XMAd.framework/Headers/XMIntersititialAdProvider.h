@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)preloadAds:(XMAdIntersititialParam *)param;
 
 
-/// 从缓存中获取广告，不会触发广告请求，但是可能会阻塞线程，获取的广告可能为nil
+/// 从缓存中获取广告，不会触发广告请求，获取的广告可能为nil
 /// @param param param
 /// @param error 错误信息
 + (XMIntersititialAd *)fetchIntersititialAdFromCache:(XMAdParam *)param

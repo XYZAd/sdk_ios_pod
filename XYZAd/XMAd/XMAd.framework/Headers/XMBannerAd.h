@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告基本信息
 @property (nonatomic, strong, readonly) XMAdMaterialMeta *materialMeta;
 
-/// 用来跳转的vc，可不传
+/// 用来跳转的vc，必传
 @property (nonatomic, weak, nullable) UIViewController *presenterController;
 
 /// 获取bannerView 添加约束 内容已显示在此view上

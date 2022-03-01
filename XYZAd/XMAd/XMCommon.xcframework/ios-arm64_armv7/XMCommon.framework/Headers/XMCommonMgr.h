@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// apptypeid
 @property (nonatomic, copy  ) NSString *APP_TypeId;
 
+// <option> 没有特殊需求，这个参数请忽略
+/// apptypesubid
+@property (nonatomic, copy  ) NSString *APP_TypeSubId;
+
 // <option>
 /// SDK内接口环境配置(请注意上线前 一定要设置为 XMSDKRunModeRelease)
 @property (nonatomic, assign) XMSDKRunMode sdkRunMode;
