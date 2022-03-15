@@ -36,4 +36,71 @@ typedef NS_ENUM(NSInteger, XMFeedADMode) {
 
 @end
 
+@interface XMExpressAttributed : NSObject
+
+/**
+ Background color of the native ad view.
+ */
+@property (nonatomic, copy, nullable) UIColor *backgroundColor;
+/**
+ Color of the title label.
+ */
+@property (nonatomic, copy, nullable) UIColor *titleColor;
+/**
+ Color of the advertiser name label.
+ */
+@property (nonatomic, copy, nullable) UIColor *advertiserNameColor;
+/**
+ Color of the ad choices icon.
+ */
+@property (nonatomic, copy, nullable) UIColor *adChoicesForegroundColor;
+/**
+ Font of the title label.
+ */
+@property (nonatomic, copy, nullable) UIFont *titleFont;
+/**
+ Color of the description label.
+ */
+@property (nonatomic, copy, nullable) UIColor *descriptionColor;
+/**
+ Font of the description label.
+ */
+@property (nonatomic, copy, nullable) UIFont *descriptionFont;
+/**
+ Background color of the call to action button.
+ */
+@property (nonatomic, copy, nullable) UIColor *buttonColor;
+/**
+ Color of the call to action button's title label.
+ */
+@property (nonatomic, copy, nullable) UIColor *buttonTitleColor;
+/**
+ Font of the call to action button's title label.
+ */
+@property (nonatomic, copy, nullable) UIFont *buttonTitleFont;
+/**
+ Border color of the call to action button. If nil, no border is shown.
+ */
+@property (nonatomic, copy, nullable) UIColor *buttonBorderColor;
+
+/**
+ cornerRadius of the call to action button. If nil, no corner.
+ */
+@property (nonatomic, strong, nullable) NSNumber *buttonCornerRadius;
+
+@end
+
+
+typedef NSString *XMNativeAssetIdentifier;
+
+FOUNDATION_EXTERN XMNativeAssetIdentifier _Nonnull const XMNativeTitleAsset; //标题
+FOUNDATION_EXTERN XMNativeAssetIdentifier _Nonnull const XMNativeContentAsset; //副标题
+FOUNDATION_EXTERN XMNativeAssetIdentifier _Nonnull const XMNativeIconAsset; //广告icon(app icon)
+FOUNDATION_EXTERN XMNativeAssetIdentifier _Nonnull const XMNativeLogoAsset; //广告Logo
+FOUNDATION_EXTERN XMNativeAssetIdentifier _Nonnull const XMNativeBodyImageAsset; // 广告图片
+FOUNDATION_EXTERN XMNativeAssetIdentifier _Nonnull const XMNativeDownloadAsset; // 下载按钮
+FOUNDATION_EXTERN XMNativeAssetIdentifier _Nonnull const XMNativeMediaAsset;// 视频
+FOUNDATION_EXTERN XMNativeAssetIdentifier _Nonnull const XMNativeAppNameAsset;// appname
+
+
 NS_ASSUME_NONNULL_END

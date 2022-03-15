@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.4.8.1'
+  s.version          = '1.4.9'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   #穿山甲
   s.subspec 'JRTTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'Ads-CN', '4.2.0.4'
+    ss.dependency 'Ads-CN', '4.2.5.6'
   end
 
   #百度
@@ -66,19 +66,19 @@ Pod::Spec.new do |s|
   #广点通
   s.subspec 'GDTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'GDTMobSDK', '4.13.42'
+    ss.dependency 'GDTMobSDK', '4.13.50'
   end
 
   #MTG
   s.subspec 'MTGSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'MintegralAdSDK/All', '7.0.4'
+    ss.dependency 'MintegralAdSDK/All', '7.1.1'
   end
 
   #SigmobAd
   s.subspec 'SIGMOBSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'SigmobAd-iOS', '3.4.3'
+    ss.dependency 'SigmobAd-iOS', '3.5.3'
   end  
 
   #快手
@@ -92,15 +92,15 @@ Pod::Spec.new do |s|
   #聚合
   s.subspec 'JHSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-	  ss.dependency 'GDTMobSDK', '4.13.42'
-    # 42.100
+	  ss.dependency 'GDTMobSDK', '4.13.50'
+    # 42.101
     ss.vendored_frameworks = 'XYZAd/JH_SDK/*.framework'
   end  
     
   #游可盈
   s.subspec 'YouKeYingSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    # 2.3.1.203
+    # 2.5.1.202
     ss.vendored_frameworks = 'XYZAd/YKY_SDK/*.framework'
   end  
 
@@ -126,7 +126,7 @@ Pod::Spec.new do |s|
   s.subspec 'UMengSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
     ss.dependency 'UMCommon', '7.3.6'
-    ss.dependency 'UMUnionSDK', '1.0.0'
+    ss.dependency 'UMUnionSDK', '1.1.0'
     ss.dependency 'UMDevice', '2.2.0'
   end
 
@@ -139,6 +139,12 @@ Pod::Spec.new do |s|
     #6.9.0
   	ss.dependency 'XYZAd/XMAdSDK'
     ss.vendored_frameworks = 'XYZAd/FB_SDK/*.xcframework'
+  end
+
+  s.subspec 'GADAdSDK' do |ss|
+  	ss.dependency 'XYZAd/XMAdSDK'
+  	#9.1.0
+  	ss.vendored_frameworks = 'XYZAd/GAD_SDK/*.xcframework'
   end
 
 end

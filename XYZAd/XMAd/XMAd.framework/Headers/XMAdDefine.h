@@ -48,6 +48,7 @@ typedef NS_ENUM(NSInteger, XMAdSourceType) {
     XMAdSourceTypeUMSDK,            /// 友盟SDK
     XMAdSourceTypeUnityAdsSDK,      /// unityads
     XMAdSourceTypeFBSDK,            /// facebook
+    XMAdSourceTypeGADSDK,           /// 谷歌
 };
 
 typedef NS_ENUM(NSUInteger, XMAdMediaPlayerStatus) {
@@ -92,5 +93,7 @@ FOUNDATION_EXPORT XMAdKey const kUMAdKey;
 FOUNDATION_EXTERN XMAdKey const kUnityAdKey;
 /// 脸书
 FOUNDATION_EXTERN XMAdKey const kFBAdKey;
+/// 谷歌
+FOUNDATION_EXTERN XMAdKey const kGADAdKey;
 
 #endif /* XMAdDefine_h */

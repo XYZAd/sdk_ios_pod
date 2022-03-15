@@ -57,7 +57,7 @@ typedef void (^KLNUnifiedNativeAdLoadCompletionHandler)(NSArray<KLNUnifiedNative
 /// 按钮文案
 @property (nonatomic, readonly, nullable) NSString *actionTitle;
 
-/// 是否为视频广告
+/// 广告类型
 @property (nonatomic, readonly) KLNUnifiedNativeAdType adType;
 
 /// 广告图标
@@ -117,7 +117,7 @@ typedef void (^KLNUnifiedNativeAdLoadCompletionHandler)(NSArray<KLNUnifiedNative
 
 @optional
 
-/// 广告素材加载成功回调
+/// 广告素材加载结果回调
 /// @param ad  KLNUnifiedNativeAd实例
 /// @param error 素材加载成功为nil，失败非nil
 - (void)kln_unifiedNativeAdDidLoad:(KLNUnifiedNativeAd *)ad didCompleteWithError:(NSError *_Nullable)error;

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <XMAd/XMImgTextData.h>
 
 @class XMAdModel;
 @class XMError;
@@ -44,6 +44,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// 移除containerView的进屏监听 & 移除点击事件<建议和上面的register方法成对使用>
 /// tableView、collectionView等场景时，需要在合适的时机（如:cell的prepareForReuse）执行此方法，
 - (void)unRegistAdContainer;
+
+
+
+/// 此方法 会添加点击事件 且会自动监听containerView的进屏,请注意，如果接入谷歌广告，请用次注册方法
+/// @param containerView  adView容器视图
+/// @param clickableAssetViews 可以点击的视图， if empty will clickAble containerView
+/// @param nonclickableAssetViews 不可以点击的视图
+/// @param vc             需传入用来弹出目标页的ViewController，一般为当前ViewController
+- (void)registerAdContainer:(__kindof UIView *)containerView
+        clickableAssetViews:(NSDictionary<XMNativeAssetIdentifier, UIView *> * _Nullable)clickableAssetViews
+     nonclickableAssetViews:(NSDictionary<XMNativeAssetIdentifier, UIView *> * _Nullable)nonclickableAssetViews
+                  presentVC:(UIViewController *)vc;
 
 /// 刷新ad
 - (void)refreshAdData;

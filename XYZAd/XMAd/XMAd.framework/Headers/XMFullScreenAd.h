@@ -45,6 +45,11 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol XMFullScreenAdDelegate <NSObject>
 @optional
 
+/// 展示失败
+/// @param ad ad
+/// @param error error
+- (void)fullScreenAdPresentFaild:(XMFullScreenAd *)ad error:(XMError *)error;
+
 /// 曝光回调
 /// @param ad ad
 - (void)fullScreenAdDidExposure:(XMFullScreenAd *)ad;

@@ -9,11 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @class XMVideoConfig;
+@class XMExpressAttributed;
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 该枚举只针对海外SDK，即FBSDK、GADSDK有效
+typedef NS_ENUM(NSInteger, XMExpressImgAdViewRenderSize) {
+    XMExpressImgAdViewRenderSize_Small        ,///小尺寸
+    XMExpressImgAdViewRenderSize_Medium       ,///中尺寸
+};
+
 @interface XMAdExpressView : UIView
 
+/// 下面两个属性共存，渲染尺寸类型，只针对于FBSDK、GADSDK，若不接谷歌和脸书，则忽略
+@property (nonatomic, assign) XMExpressImgAdViewRenderSize renderSize;
+@property (nonatomic, strong) XMExpressAttributed *attributed;
 
 /**
  * 视频配置（default is null）

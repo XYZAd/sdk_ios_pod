@@ -97,6 +97,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) BOOL skippable;
 
 /**
+ *  广告是否有效，以下情况会返回NO，建议在展示广告之前判断，否则会影响计费或展示失败
+ *  a.广告过期
+ */
+@property (nonatomic, readonly) BOOL isAdValid;
+
+/**
  视频广告播放配置
  */
 @property (nonatomic, strong) JHVideoConfig *videoConfig;

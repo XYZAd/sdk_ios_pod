@@ -45,6 +45,11 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol XMIntersititialAdDelegate <NSObject>
 @optional
 
+/// 展示失败
+/// @param ad ad
+/// @param error error
+- (void)intersititialAdPresentFaild:(XMIntersititialAd *)ad error:(XMError *)error;
+
 /// 曝光回调
 /// @param ad ad
 - (void)intersititialAdDidExposure:(XMIntersititialAd *)ad;

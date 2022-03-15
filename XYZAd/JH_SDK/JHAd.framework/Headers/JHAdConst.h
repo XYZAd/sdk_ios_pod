@@ -74,7 +74,13 @@ typedef NS_ENUM(NSInteger, JHVideoAutoPlayPolicy) {
 };
 
 
-
+typedef NS_ENUM(NSInteger, JHAdBiddingLossReason) {
+    JHAdBiddingLossReasonLowPrice          = 1,        // 竞争力不足
+    JHAdBiddingLossReasonLoadTimeout       = 2,        // 返回超时
+    JHAdBiddingLossReasonNoAd              = 3,        // 无广告回包
+    JHAdBiddingLossReasonAdDataError       = 4,        // 回包不合法
+    JHAdBiddingLossReasonOther             = 10001     // 其他
+};
 
 
 NS_ASSUME_NONNULL_BEGIN

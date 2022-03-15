@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 FOUNDATION_EXTERN NSString *const XMAdErrorDomain;
 
+FOUNDATION_EXTERN NSString *const XMAdUserInfoPosition;
+
+FOUNDATION_EXTERN NSString *const XMAdUserInfoCombineErrorsKey;
 
 typedef NS_ENUM(NSInteger, XMADErrorCode) {
     XMADErrorCode_None              = 0,
@@ -33,24 +36,39 @@ typedef NS_ENUM(NSInteger, XMADErrorCode) {
     
     XMADErrorCode_ClouldLimit       = 15, /// 云控限制请求
     
-    XMADErrorCode_PriceTooLow       = 16, /// 价格太低
+    XMADErrorCode_PriceTooLow       = 16, /// 价格太低导致没有广告
     
     XMADErrorCode_RenderInvidate    = 17, /// 渲染类型错误
     
     XMADErrorCode_CacheNoAd         = 18, /// 缓存中没有广告
+    
+    XMADErrorCode_PriceLowCache     = 16, /// 请求的广告低于缓存里的价格，不予请求
+    
+    XMADErrorCode_PresentVc         = 17, /// 吊起广告失败
+    
+    XMADErrorCode_Expired           = 18, /// 广告过期
+    
+    XMADErrorCode_VenderErr         = 666,  /// 三方sdk错误
+    
+    XMADErrorCode_ConmbineErrs      = 667,  /// 多种position错误集合
     
     XMADErrorCode_unknown_error     = 9999, /// 未知错误
     
 };
 
 
-@interface XMError : NSError
 
-+ (instancetype)errorWithCode:(NSInteger)code userInfo:(NSDictionary<NSErrorUserInfoKey,id> *)dict;
+@interface XMError : NSObject
 
+@property (readonly, copy) NSString *domain;
+@property (readonly) NSInteger code;
+@property (readonly, copy) NSDictionary<NSString *, id> *userInfo;
+@property (readonly, copy) NSString *localizedDescription;
 
-+ (instancetype)getErrorWithAdError:(NSError *)error;
++ (instancetype)errorWithCode:(NSInteger)code userInfo:(NSDictionary<NSString *,id> *)dict;
+
 
 @end
+
 
 NS_ASSUME_NONNULL_END

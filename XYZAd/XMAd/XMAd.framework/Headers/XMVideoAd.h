@@ -49,6 +49,11 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol XMVideoAdDelegate <NSObject>
 @optional
 
+/// 展示失败
+/// @param ad ad
+/// @param error error
+- (void)videoAdPresentFaild:(XMVideoAd *)ad error:(XMError *)error;
+
 /// 曝光回调
 /// @param ad ad
 - (void)videoAdDidExposure:(XMVideoAd *)ad;

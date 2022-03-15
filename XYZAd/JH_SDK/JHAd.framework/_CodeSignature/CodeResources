@@ -478,7 +478,7 @@
 		</data>
 		<key>Headers/JHAdConst.h</key>
 		<data>
-		0ohaJVRTWIhi0I0bzFMuY9wL+OU=
+		w53532Uruc20kYpy1tNmlgFn9DA=
 		</data>
 		<key>Headers/JHBannerAdFactory.h</key>
 		<data>
@@ -526,7 +526,7 @@
 		</data>
 		<key>Headers/JHSplashAd.h</key>
 		<data>
-		fKouibUkH3y2yq7t+fWSJuOtfBE=
+		FB7WBp/y4bjZpMNCTbKOgDcvVb8=
 		</data>
 		<key>Headers/JHSplashAdFactory.h</key>
 		<data>
@@ -538,7 +538,7 @@
 		</data>
 		<key>Headers/JHUnifiedNativeAdDataObject.h</key>
 		<data>
-		oKN2lj8MmR1M2Cr6JeHb6kqFRTo=
+		gHqgu2FX7+RbFiaK0c8Af3LAPx8=
 		</data>
 		<key>Headers/JHUnifiedNativeAdFactory.h</key>
 		<data>
@@ -1716,11 +1716,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0ohaJVRTWIhi0I0bzFMuY9wL+OU=
+			w53532Uruc20kYpy1tNmlgFn9DA=
 			</data>
 			<key>hash2</key>
 			<data>
-			swW/7v6jlRRrPUiVAYLWIOyjyPo7FX+DrvpztIJkbC8=
+			5D7ieVX1wnS4lLbsN5qLBpWbVQtfiBYzwj3ONvcSwvw=
 			</data>
 		</dict>
 		<key>Headers/JHBannerAdFactory.h</key>
@@ -1848,11 +1848,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fKouibUkH3y2yq7t+fWSJuOtfBE=
+			FB7WBp/y4bjZpMNCTbKOgDcvVb8=
 			</data>
 			<key>hash2</key>
 			<data>
-			LRH4B42tfVPAAnsDcSO2eT6A7E8P6qMuJVeCle8/cOw=
+			37rhMo6YxeRZzz9P+nUHaLioGjaD5ow/L0/jVfzzXKo=
 			</data>
 		</dict>
 		<key>Headers/JHSplashAdFactory.h</key>
@@ -1881,11 +1881,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oKN2lj8MmR1M2Cr6JeHb6kqFRTo=
+			gHqgu2FX7+RbFiaK0c8Af3LAPx8=
 			</data>
 			<key>hash2</key>
 			<data>
-			bSi1QWy9HT6r0o/dEZxJbW73ctPK4oMBCQqPwmrhEwo=
+			hg8p0dB6W6ujnt8TDmgZLa//B2FwijSbYmMCizF3R5E=
 			</data>
 		</dict>
 		<key>Headers/JHUnifiedNativeAdFactory.h</key>
