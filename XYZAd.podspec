@@ -146,7 +146,7 @@ Pod::Spec.new do |s|
   	#9.1.0
   	ss.vendored_frameworks = 'XYZAd/GAD_SDK/*.xcframework'
   end
-  s.subspec 'AppLovinSDK' do |ss|
+  s.subspec 'ALSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
     ss.dependency 'AppLovinSDK', '11.3.1'
   end
