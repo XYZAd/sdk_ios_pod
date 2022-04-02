@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.5.0'
+  s.version          = '1.5.1'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
