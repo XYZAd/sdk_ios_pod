@@ -182,6 +182,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)showInWindow:(UIWindow *)window withBottomView:(UIView *)bottomView skipView:(UIView *__nullable)skipView;
 
 
+
 @end
 
 NS_ASSUME_NONNULL_END

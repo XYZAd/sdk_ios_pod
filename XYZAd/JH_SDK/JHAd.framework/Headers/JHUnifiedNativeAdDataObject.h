@@ -80,6 +80,12 @@ NS_ASSUME_NONNULL_BEGIN
  @return 成功返回一个包含数字的string，@""或nil表示无权限或后台异常
  */
 @property (nonatomic, readonly) NSString *eCPMLevel;
+/**
+ 返回广告的eCPM，单位：分
+ 
+ @return 成功返回一个大于等于0的值，-1表示无权限或后台出现异常
+ */
+@property (nonatomic, readonly) NSInteger eCPM;
 
 /**
  广告对应的CTA文案，自定义CTA视图时建议使用此字段

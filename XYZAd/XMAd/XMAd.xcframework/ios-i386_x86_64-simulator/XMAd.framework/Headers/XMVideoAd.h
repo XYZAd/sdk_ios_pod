@@ -72,6 +72,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)videoAdPlayFinished:(BOOL)finished
                       error:(XMError *)error;
 
+
+/// 视频播放到有效时间 仅 穿山甲-广点通-聚合 有效
+/// @param ad ad
+- (void)videoAdDidRewardEffective:(XMVideoAd *)ad;
+
+
 /// 视频上方自定义额外的试图，例如vip充值可跳过广告(慎用),注意：UnityAd、AdColony、IronSource广告不支持下面功能（- (void)videoAdCustomExtraView:,- (BOOL)videoAdCustomExtraViewAlwaysOnContainer:,- (void)videoAdExtraViewDidClick: controller:）
 /// @param ad ad
 - (UIView *)videoAdCustomExtraView:(XMVideoAd *)ad;
