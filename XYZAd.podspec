@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.5.1'
+  s.version          = '1.5.2'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   #广点通
   s.subspec 'GDTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'GDTMobSDK', '4.13.53'
+    ss.dependency 'GDTMobSDK', '4.13.61'
   end
 
   #MTG
@@ -92,8 +92,8 @@ Pod::Spec.new do |s|
   #聚合
   s.subspec 'JHSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-	  ss.dependency 'GDTMobSDK', '4.13.53'
-    # 42.101
+	  ss.dependency 'GDTMobSDK', '4.13.61'
+    # 42.103
     ss.vendored_frameworks = 'XYZAd/JH_SDK/*.framework'
   end  
     
@@ -126,7 +126,7 @@ Pod::Spec.new do |s|
   s.subspec 'UMengSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
     ss.dependency 'UMCommon', '7.3.6'
-    ss.dependency 'UMUnionSDK', '1.1.0'
+    ss.dependency 'UMUnionSDK', '1.3.0'
     ss.dependency 'UMDevice', '2.2.0'
   end
 
