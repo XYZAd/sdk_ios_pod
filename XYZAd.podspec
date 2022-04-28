@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.5.3'
+  s.version          = '1.5.4'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -54,13 +54,13 @@ Pod::Spec.new do |s|
   #穿山甲
   s.subspec 'JRTTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'Ads-CN', '4.3.0.5'
+    ss.dependency 'Ads-CN', '4.3.1.9'
   end
 
   #百度
   s.subspec 'BDSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'BaiduMobAdSDK', '4.85'
+    ss.dependency 'BaiduMobAdSDK', '4.861'
   end
 
   #广点通
