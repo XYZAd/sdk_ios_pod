@@ -57,6 +57,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// UnityAd appid
 @property (nonatomic, copy, nullable) NSString *unity_appid;
 
+/// Vungle appid
+@property (nonatomic, copy, nullable) NSString *vungle_appid;
+
 /// MTG`s appid(坑爹的玩意)
 @property (nonatomic, strong, nullable) XMPreInitInfo *mtgInfo;
 

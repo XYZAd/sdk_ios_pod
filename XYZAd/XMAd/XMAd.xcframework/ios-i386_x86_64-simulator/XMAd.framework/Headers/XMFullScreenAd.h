@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param rootVC       根试图控制器
 /// @param completion   播放结束的回调
 - (BOOL)showFullScreenAdFromRootVC:(UIViewController *)rootVC
-                   closeCompletion:(void (^)(BOOL success, NSString * _Nullable errMsg))completion;
+                   closeCompletion:(void (^)(void))completion;
 
 @end
 
@@ -57,6 +57,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 点击回调
 /// @param ad ad
 - (void)fullScreenAdDidClick:(XMFullScreenAd *)ad;
+
+/// 点击跳过
+/// @param ad ad
+- (void)fullScreenAdDidSkip:(XMFullScreenAd *)ad;
 
 /// 关闭
 /// @param ad ad

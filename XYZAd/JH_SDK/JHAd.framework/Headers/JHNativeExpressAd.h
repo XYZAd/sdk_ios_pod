@@ -131,6 +131,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSInteger maxVideoDuration;
 
 
+/**
+ *  构造方法
+ *  详解：placementId - 广告位 ID
+ *       adSize - 广告展示的宽高
+ *       viewController - 视图控制器
+ */
+
+- (instancetype)initWithPlacementId:(NSString *)placementId adSize:(CGSize)size viewController:(UIViewController *)viewController listView:(UIView *)listView;
+
+              
+
 /**加载广告,返回的数量可能比请求加载的数量少*/
 - (void)loadAd:(NSInteger)count;
 

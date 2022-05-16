@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.5.4'
+  s.version          = '1.5.5'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
   #百度
   s.subspec 'BDSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'BaiduMobAdSDK', '4.861'
+    ss.dependency 'BaiduMobAdSDK', '4.87'
   end
 
   #广点通
@@ -126,7 +126,7 @@ Pod::Spec.new do |s|
   s.subspec 'UMengSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
     ss.dependency 'UMCommon', '7.3.6'
-    ss.dependency 'UMUnionSDK', '1.3.0'
+    ss.dependency 'UMUnionSDK', '1.4.0'
     ss.dependency 'UMDevice', '2.2.0'
   end
 
@@ -151,4 +151,8 @@ Pod::Spec.new do |s|
     ss.dependency 'AppLovinSDK', '11.3.1'
   end
 
+s.subspec 'VGSDK' do |ss|
+    ss.dependency 'XYZAd/XMAdSDK'
+    ss.dependency 'VungleSDK-iOS', '6.9.1'
+  end
 end

@@ -64,7 +64,7 @@ typedef NS_ENUM(NSUInteger, XMAdPositionAdType) {
     
 };
 
-/// 自渲染插屏默认两个尺寸选择，也可以通过nativeImageSize自定义设置
+/// 自渲染插屏默认两个尺寸选择，也可以通过expectAdSize自定义设置
 typedef NS_ENUM(NSUInteger, XMNativeInterstitialImageSize) {
     XMNativeImageSize1080x1920          = 0,        // 大图
     XMNativeImageSize640x960            = 1,        // 小图或者组图
@@ -103,7 +103,7 @@ typedef NS_ENUM(NSUInteger, XMNativeInterstitialImageSize) {
 /// 期望大小（信息流广告（且是穿山甲、京东）的插屏、banner，或者是banner才用到）unit pixel（px）.
 @property (nonatomic, assign) CGSize expectAdSize;
 
-/// 设置插屏默认大小选项，如果设置了nativeImageSize，这下面这个参数无效
+/// 设置插屏默认大小选项，如果设置了expectAdSize，这下面这个参数无效
 @property (nonatomic, assign) XMNativeInterstitialImageSize defaultImageSize;
 
 + (instancetype)adReqParamsWithPosition:(nonnull XMAdPageType *)position

@@ -50,6 +50,7 @@ typedef NS_ENUM(NSInteger, XMAdSourceType) {
     XMAdSourceTypeFBSDK,            /// facebook
     XMAdSourceTypeGADSDK,           /// 谷歌
     XMAdSourceTypeAppLoinSDK,       /// AppLoin
+    XMAdSourceTypeVungleSDK,        /// Vungle
 };
 
 typedef NS_ENUM(NSUInteger, XMAdMediaPlayerStatus) {
@@ -98,5 +99,7 @@ FOUNDATION_EXTERN XMAdKey const kFBAdKey;
 FOUNDATION_EXTERN XMAdKey const kGADAdKey;
 /// AppLoin
 FOUNDATION_EXTERN XMAdKey const kAppLoinAdKey;
+/// Vungle
+FOUNDATION_EXTERN XMAdKey const kVungleAdKey;
 
 #endif /* XMAdDefine_h */

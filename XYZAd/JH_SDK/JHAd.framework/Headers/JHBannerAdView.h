@@ -104,6 +104,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)eCPMLevel;
 
 /**
+ *  构造方法
+ *  详解：frame - banner 展示的位置和大小
+ *       placementId - 广告位 ID
+ *       viewController - 视图控制器
+ */
+- (instancetype)initWithFrame:(CGRect)frame
+                  placementId:(NSString *)placementId
+               viewController:(UIViewController *)viewController;
+
+
+/**
  *  拉取并展示广告
  */
 - (void)loadAdAndShow;

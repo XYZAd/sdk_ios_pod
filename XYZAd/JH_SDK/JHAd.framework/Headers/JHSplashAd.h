@@ -130,6 +130,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *eCPMLevel;
 
 /**
+ *  构造方法
+ *  详解：placementId - 广告位 ID
+ */
+- (instancetype)initWithPlacementId:(NSString *)placementId;
+/**
  * 返回广告是否可展示
  * @return 当广告已经加载完成且未曝光时，为YES，否则为NO
  */

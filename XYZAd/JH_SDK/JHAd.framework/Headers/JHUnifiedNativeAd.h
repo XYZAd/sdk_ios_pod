@@ -59,7 +59,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) JHVideoRenderType videoRenderType;
 
+/**
+ 构造方法
 
+ @param placementId 广告位ID
+ @return JHUnifiedNativeAd 实例
+ */
+- (instancetype)initWithPlacementId:(NSString *)placementId;
 
 /**
  加载广告

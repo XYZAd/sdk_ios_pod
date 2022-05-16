@@ -179,6 +179,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) NSString *eCPMLevel;
 
+/**
+ 构造方法
+
+ @param placementId 广告位ID
+ @return JHInterstitialAd 实例
+ */
+- (instancetype)initWithPlacementId:(NSString *)placementId;
 
 /**
  *  广告发起请求方法

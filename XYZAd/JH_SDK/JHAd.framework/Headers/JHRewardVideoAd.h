@@ -89,6 +89,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) NSInteger expiredTimestamp;
 @property (nonatomic, weak) id <JHRewardedVideoAdDelegate> delegate;
 
+/**
+ 构造方法
+
+ @param placementId 广告位ID
+ @return JHRewardVideoAd 实例
+ */
+- (instancetype)initWithPlacementId:(NSString *)placementId;
 
 /**
  加载广告方法 支持 iOS8.1 及以上系统
@@ -102,14 +109,19 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)showAdFromRootViewController:(UIViewController *)rootViewController;
 
-
+/**
+ 返回广告的eCPM，单位：分
+ 
+ @return 成功返回一个大于等于0的值，-1表示无权限或后台出现异常
+ */
+@property (nonatomic, readonly) NSInteger eCPM;
 
 /**
  返回广告的eCPM等级
  
  @return 成功返回一个包含数字的string，@""或nil表示无权限或后台异常
  */
-- (NSString *)eCPMLevel;
+@property (nonatomic, readonly) NSString *eCPMLevel;
 
 
 /**
@@ -118,6 +130,20 @@ NS_ASSUME_NONNULL_BEGIN
  @return 当使用 google 补余功能时，用于区分广告平台
  */
 - (NSString *)adNetworkName;
+
+/**
+ *  竞胜之后调用, 需要在调用广告 show 之前调用
+ *  @param price - 竞胜价格 (单位: 分)
+ */
+- (void)sendWinNotificationWithPrice:(NSInteger)price;
+
+/**
+ *  竞败之后调用
+ *  @param price - 竞胜价格 (单位: 分)
+ *  @param reason - 优量汇广告竞败原因
+ *  @param adnID - adnID
+ */
+- (void)sendLossNotificationWithWinnerPrice:(NSInteger)price lossReason:(JHAdBiddingLossReason)reason winnerAdnID:(NSString *)adnID;
 
 @end
 

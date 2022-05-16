@@ -58,6 +58,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param ad ad
 - (void)intersititialAdDidClick:(XMIntersititialAd *)ad;
 
+/// 点击跳过
+/// @param ad ad
+- (void)intersititialAdDidSkip:(XMIntersititialAd *)ad;
+
 /// 关闭
 /// @param ad ad
 - (void)intersititialAdDidClose:(XMIntersititialAd *)ad;
