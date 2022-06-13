@@ -30,6 +30,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告单价信息标签，注意，这里是加密（base64）后的字符串，如需解密，请联系对接开发
 @property (nonatomic, copy, readonly) NSString *ecpmLevel;
 
+/// 挂件信息(只有GDT 万裕 有)
+/// widget_info : {"type": 1,
+///                "width": 111,
+///                "height": 222,
+///                "url": "https://xx.xx.xx"}
+@property(nonatomic, strong) NSDictionary *extraInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

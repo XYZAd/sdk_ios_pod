@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYZAd'
-  s.version          = '1.5.5'
+  s.version          = '1.5.7'
   s.summary          = 'XYZAd Description'
   s.description      = <<-DESC
                        XYZAd Description...
@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   #穿山甲
   s.subspec 'JRTTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'Ads-CN', '4.3.1.9'
+    ss.dependency 'Ads-CN', '4.5.1.6'
   end
 
   #百度
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   #广点通
   s.subspec 'GDTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'GDTMobSDK', '4.13.63'
+    ss.dependency 'GDTMobSDK', '4.13.70'
   end
 
   #MTG
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #聚合
   s.subspec 'JHSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-	  ss.dependency 'GDTMobSDK', '4.13.63'
+	  ss.dependency 'GDTMobSDK', '4.13.70'
     # 42.103
     ss.vendored_frameworks = 'XYZAd/JH_SDK/*.framework'
   end  

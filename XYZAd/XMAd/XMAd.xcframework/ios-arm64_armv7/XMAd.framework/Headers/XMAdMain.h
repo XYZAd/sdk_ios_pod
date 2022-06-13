@@ -80,6 +80,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 通过此配置可选择 在XMAd初始化后 立即开始初始化指定的三方SDK 以避免上述问题
 @property (nonatomic, strong, nullable) XMPreInitSDKAppids *appids;
 
+/// 是否关闭上报启动日志和在线时长日志  YES: 关闭  NO : 开启
+@property(nonatomic, assign) BOOL closeOpenLog;
+
 @end
 
 

@@ -101,6 +101,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param provider provider
 - (void)splashAdDetailPageDidClose:(XMSplashAdProvider *)provider;
 
+
+/// 开屏领取奖励
+/// @param provider provider
+- (void)splashAdDidRewardEffective:(XMSplashAdProvider *)provider;
+
 @end
 
 NS_ASSUME_NONNULL_END

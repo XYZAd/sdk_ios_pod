@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "JHVideoConfig.h"
-
+#import <JHAd/JHAdProtocol.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JHUnifiedNativeAdDataObject : NSObject
+@interface JHUnifiedNativeAdDataObject : NSObject<JHAdProtocol>
 
 /**
  广告标题

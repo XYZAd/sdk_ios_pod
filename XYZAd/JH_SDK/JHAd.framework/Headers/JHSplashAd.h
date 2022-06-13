@@ -121,6 +121,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) CGPoint skipButtonCenter;
 
+/**
+ 返回广告的eCPM，单位：分
+ 
+ @return 成功返回一个大于等于0的值，-1表示无权限或后台出现异常
+ */
+@property (nonatomic, readonly) NSInteger eCPM;
 
 /**
  返回广告的eCPM等级
@@ -188,6 +194,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+/**
+ *  竞胜之后调用, 需要在调用广告 show 之前调用
+ *  @param price - 竞胜价格 (单位: 分)
+ */
+- (void)sendWinNotificationWithPrice:(NSInteger)price;
+
+/**
+ *  竞败之后调用
+ *  @param price - 竞胜价格 (单位: 分)
+ *  @param reason - 优量汇广告竞败原因
+ *  @param adnID - adnID
+ */
+- (void)sendLossNotificationWithWinnerPrice:(NSInteger)price lossReason:(JHAdBiddingLossReason)reason winnerAdnID:(NSString *)adnID;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -145,7 +145,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**加载广告,返回的数量可能比请求加载的数量少*/
 - (void)loadAd:(NSInteger)count;
 
+/**
+ *  竞胜之后调用, 需要在调用广告 show 之前调用
+ *  @param price - 竞胜价格 (单位: 分)
+ */
+- (void)sendWinNotificationWithPrice:(NSInteger)price;
 
+/**
+ *  竞败之后调用
+ *  @param price - 竞胜价格 (单位: 分)
+ *  @param reason - 优量汇广告竞败原因
+ *  @param adnID - adnID
+ */
+- (void)sendLossNotificationWithWinnerPrice:(NSInteger)price lossReason:(JHAdBiddingLossReason)reason winnerAdnID:(NSString *)adnID;
 
 
 @end
