@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   #穿山甲
   s.subspec 'JRTTSDK' do |ss|
     ss.dependency 'XYZAd/XMAdSDK'
-    ss.dependency 'Ads-CN', '4.5.1.6'
+    ss.dependency 'Ads-CN-Beta', '4.5.1.6'
   end
 
   #百度
