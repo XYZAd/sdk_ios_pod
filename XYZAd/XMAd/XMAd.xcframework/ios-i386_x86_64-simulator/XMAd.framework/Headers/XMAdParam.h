@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 请求超时时间 (当<=0时无效, 使用SDK默认时间)
 @property (nonatomic, assign          ) NSTimeInterval reqTimeout;
 
+/// 触发自动填充缓存广告的最小值 默认为0
+@property (nonatomic, assign          ) NSInteger autoCacheNumber;
 
 + (instancetype)adReqParamsWithPosition:(nonnull XMAdPageType *)position
                              gametypeID:(nullable NSString *)gametypeID;

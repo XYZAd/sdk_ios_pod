@@ -74,6 +74,8 @@ typedef NS_ENUM(NSInteger, XMADErrorCode) {
     
     XMADErrorCode_ConmbineErrs      = 667,  /// 多种position错误集合
     
+    XMADErrorCode_RequestDuplicate  = 888,  /// 正在播放激励视频或者全屏视频时, 重复请求
+
     XMADErrorCode_unknown_error     = 9999, /// 未知错误
     
 };

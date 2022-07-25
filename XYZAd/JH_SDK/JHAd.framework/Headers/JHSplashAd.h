@@ -82,7 +82,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)jh_splashAdLifeTime:(NSUInteger)time splashAd:(JHSplashAd *__nullable)splashAd;
 
 
-
+/**
+ 开屏激励回调 (只有开屏激励广告位才会有此回调)
+ @param splashAd  JHSplashAd 实例
+ @param info 包含此次广告行为的一些信息，例如 @{@"JH_TRANS_ID":@"930f1fc8ac59983bbdf4548ee40ac353"}, 通过@“GDT_TRANS_ID”可获取此次广告行为的交易id
+ */
+- (void)jh_splashAdDidRewardEffective:(JHSplashAd *)splashAd info:(NSDictionary *)info;
 
 @end
 

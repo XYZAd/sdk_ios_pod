@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/XMAdParam.h</key>
 		<data>
-		yt1iiEZdd6VOLKPwdZ+SUYbJZjM=
+		mWmh8FMHrqhRb2z724bWRaEVsCQ=
 		</data>
 		<key>Headers/XMAdPositionConfig.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/XMError.h</key>
 		<data>
-		nGAt/EHE9kIRJiEy5xVUiIVVtPk=
+		8feMAe0dnDqdXH3WM8xTTzRSMrA=
 		</data>
 		<key>Headers/XMFullScreenAd.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kQwE/VDn4xLKNUY3sDxu1HBmDKQ=
+		NShYCjHHIxqnsFqjUGoj+UM8Uiw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -182,11 +182,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yt1iiEZdd6VOLKPwdZ+SUYbJZjM=
+			mWmh8FMHrqhRb2z724bWRaEVsCQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			pzWDnvZygC8RFrw5xoE6RParLVhKjNgZFKbkUc884bc=
+			rkZKZEOzb4L3So/vdurVNvFyrQNV9gN7Rh+jddy/Nio=
 			</data>
 		</dict>
 		<key>Headers/XMAdPositionConfig.h</key>
@@ -237,11 +237,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nGAt/EHE9kIRJiEy5xVUiIVVtPk=
+			8feMAe0dnDqdXH3WM8xTTzRSMrA=
 			</data>
 			<key>hash2</key>
 			<data>
-			ryLp2/9xIRMNCmxWqd2t5dHPzlHW5ZE5h+bji+RF0g0=
+			thv2tQAIjKXQ6qtXymqNBJhqgB9qZHVFF1ovO7ve/wQ=
 			</data>
 		</dict>
 		<key>Headers/XMFullScreenAd.h</key>
