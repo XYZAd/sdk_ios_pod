@@ -29,6 +29,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否是模版
 @property (nonatomic, assign) BOOL istemplate;
+
+///  展示间隔（秒) 本次展示到下一次广告请求之间的时间间隔，云控下发。未下发或参数值为空，则表示无限制、走原逻辑
+@property (nonatomic, assign) NSUInteger showinterval;
+
+
+/// 展示上限（天）：单个用户的每自然天广告展示次数上限，云控下发。未下发或参数值为空，则表示无限制、走原逻辑
+@property (nonatomic, assign) NSUInteger showupperlimit_day;
+
+
+/// 展示上限（小时） ：单个用户的每自然小时广告展示次数上限，云控下发。未下发或参数值为空，则表示无限制、走原逻辑
+@property (nonatomic, assign) NSUInteger showupperlimit_hour;
+
 @end
 
 NS_ASSUME_NONNULL_END

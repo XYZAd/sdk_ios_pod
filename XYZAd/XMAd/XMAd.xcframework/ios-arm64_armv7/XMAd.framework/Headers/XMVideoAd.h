@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)videoAdDidRewardEffective:(XMVideoAd *)ad;
 
 
-/// 视频上方自定义额外的试图，例如vip充值可跳过广告(慎用),注意：UnityAd、AdColony、IronSource广告不支持下面功能（- (void)videoAdCustomExtraView:,- (BOOL)videoAdCustomExtraViewAlwaysOnContainer:,- (void)videoAdExtraViewDidClick: controller:）
+/// 视频上方自定义额外的试图，例如vip充值可跳过广告(慎用),注意：百度、UnityAd、AdColony、IronSource 广告不支持下面功能（- (void)videoAdCustomExtraView:,- (BOOL)videoAdCustomExtraViewAlwaysOnContainer:,- (void)videoAdExtraViewDidClick: controller:）
 /// @param ad ad
 - (UIView *)videoAdCustomExtraView:(XMVideoAd *)ad;
 

@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/XMAdPositionConfig.h</key>
 		<data>
-		4uku5qhgOVyIHKtdK6sq+00DzUE=
+		Slv/HW+BvMc2lnPg9KbHyNL5RlY=
 		</data>
 		<key>Headers/XMAdProviderProtocol.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/XMVideoAd.h</key>
 		<data>
-		Boy7Bp3xLwKxWtoG96GY3XN3+7U=
+		DlruarmddHUVC/cHg1x9dHzfRiA=
 		</data>
 		<key>Headers/XMVideoAdProvider.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NShYCjHHIxqnsFqjUGoj+UM8Uiw=
+		WizBf+nXJPa4OtFXQcRrzIMd5qQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -193,11 +193,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4uku5qhgOVyIHKtdK6sq+00DzUE=
+			Slv/HW+BvMc2lnPg9KbHyNL5RlY=
 			</data>
 			<key>hash2</key>
 			<data>
-			pemkS3OdX19GUY64zzayFjWXmMhX/2Yfpjg+l0z+qJg=
+			cprrnYFPBIADGuwWJLGC9YyT01PlqWsYLIvkWTu3fm0=
 			</data>
 		</dict>
 		<key>Headers/XMAdProviderProtocol.h</key>
@@ -369,11 +369,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Boy7Bp3xLwKxWtoG96GY3XN3+7U=
+			DlruarmddHUVC/cHg1x9dHzfRiA=
 			</data>
 			<key>hash2</key>
 			<data>
-			ICXhAV7/nKhWZxtMK3mob6tp0TMQonln3zQJwOiO664=
+			po3e1hBALysfVuUJ9j6y0PM6gYmG35kGZb63MJ8E5d8=
 			</data>
 		</dict>
 		<key>Headers/XMVideoAdProvider.h</key>

@@ -75,10 +75,9 @@ typedef NS_ENUM(NSInteger, JHVideoAutoPlayPolicy) {
 
 
 typedef NS_ENUM(NSInteger, JHAdBiddingLossReason) {
-    JHAdBiddingLossReasonLowPrice          = 1,        // 竞争力不足
-    JHAdBiddingLossReasonLoadTimeout       = 2,        // 返回超时
-    JHAdBiddingLossReasonNoAd              = 3,        // 无广告回包
-    JHAdBiddingLossReasonAdDataError       = 4,        // 回包不合法
+    JHAdBiddingLossReasonLowPrice          = 1,        // 有广告回包，竞败(竞争力不足)
+    JHAdBiddingLossReasonNoAd              = 2,        // 无广告回包
+    JHAdBiddingLossReasonAdSuccNoBid       = 101,      // 有回包但未竞价
     JHAdBiddingLossReasonOther             = 10001     // 其他
 };
 
